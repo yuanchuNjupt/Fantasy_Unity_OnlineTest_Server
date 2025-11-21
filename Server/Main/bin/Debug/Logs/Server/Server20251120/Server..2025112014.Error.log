@@ -1,0 +1,6 @@
+2025-11-20 14:14:28.7744  System.NullReferenceException: Object reference not set to an instance of an object.
+   at Hotfix.Lobby.LoginRequestHandler.Run(Session session, LoginRequest request, LoginResponse response, Action reply) in D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\Lobby\LoginRequestHandler.cs:line 28
+   at Fantasy.Network.Interface.MessageRPC`2.Handle(Session session, UInt32 rpcId, UInt32 messageTypeCode, Object message)
+2025-11-20 14:14:33.6879  System.NullReferenceException: Object reference not set to an instance of an object.
+   at Hotfix.Lobby.LoginRequestHandler.Run(Session session, LoginRequest request, LoginResponse response, Action reply) in D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\Lobby\LoginRequestHandler.cs:line 28
+   at Fantasy.Network.Interface.MessageRPC`2.Handle(Session session, UInt32 rpcId, UInt32 messageTypeCode, Object message)

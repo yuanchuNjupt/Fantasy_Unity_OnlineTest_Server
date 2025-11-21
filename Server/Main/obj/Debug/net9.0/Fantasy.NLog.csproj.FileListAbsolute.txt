@@ -1,0 +1,15 @@
+/Users/fantasy/Code/Git/Fantasy/Fantasy.Packages/Fantasy.NLog/bin/Debug/net9.0/Fantasy-Net.NLog.deps.json
+/Users/fantasy/Code/Git/Fantasy/Fantasy.Packages/Fantasy.NLog/bin/Debug/net9.0/Fantasy-Net.NLog.dll
+/Users/fantasy/Code/Git/Fantasy/Fantasy.Packages/Fantasy.NLog/bin/Debug/net9.0/Fantasy-Net.NLog.pdb
+/Users/fantasy/Code/Git/Fantasy/Fantasy.Packages/Fantasy.NLog/obj/Debug/net9.0/Fantasy.NLog.csproj.AssemblyReference.cache
+/Users/fantasy/Code/Git/Fantasy/Fantasy.Packages/Fantasy.NLog/obj/Debug/net9.0/Fantasy.NLog.GeneratedMSBuildEditorConfig.editorconfig
+/Users/fantasy/Code/Git/Fantasy/Fantasy.Packages/Fantasy.NLog/obj/Debug/net9.0/Fantasy.NLog.AssemblyInfoInputs.cache
+/Users/fantasy/Code/Git/Fantasy/Fantasy.Packages/Fantasy.NLog/obj/Debug/net9.0/Fantasy.NLog.AssemblyInfo.cs
+/Users/fantasy/Code/Git/Fantasy/Fantasy.Packages/Fantasy.NLog/obj/Debug/net9.0/Fantasy.NLog.csproj.CoreCompileInputs.cache
+/Users/fantasy/Code/Git/Fantasy/Fantasy.Packages/Fantasy.NLog/obj/Debug/net9.0/Fantasy.NLog.sourcelink.json
+/Users/fantasy/Code/Git/Fantasy/Fantasy.Packages/Fantasy.NLog/obj/Debug/net9.0/Fantasy-Net.NLog.dll
+/Users/fantasy/Code/Git/Fantasy/Fantasy.Packages/Fantasy.NLog/obj/Debug/net9.0/refint/Fantasy-Net.NLog.dll
+/Users/fantasy/Code/Git/Fantasy/Fantasy.Packages/Fantasy.NLog/obj/Debug/net9.0/Fantasy-Net.NLog.pdb
+/Users/fantasy/Code/Git/Fantasy/Fantasy.Packages/Fantasy.NLog/obj/Debug/net9.0/ref/Fantasy-Net.NLog.dll
+/Users/fantasy/Code/Git/Fantasy/Fantasy.Packages/Fantasy.NLog/bin/Debug/net9.0/Fantasy.config
+/Users/fantasy/Code/Git/Fantasy/Fantasy.Packages/Fantasy.NLog/bin/Debug/net9.0/Fantasy.xsd

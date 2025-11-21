@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(TargetFramework)' == 'net8.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)fantasy-net/2025.2.13/buildTransitive/Fantasy-Net.targets" Condition="Exists('$(NuGetPackageRoot)fantasy-net/2025.2.13/buildTransitive/Fantasy-Net.targets')" />
+  </ImportGroup>
+  <ImportGroup Condition=" '$(TargetFramework)' == 'net9.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)fantasy-net/2025.2.13/buildTransitive/Fantasy-Net.targets" Condition="Exists('$(NuGetPackageRoot)fantasy-net/2025.2.13/buildTransitive/Fantasy-Net.targets')" />
+  </ImportGroup>
+</Project>

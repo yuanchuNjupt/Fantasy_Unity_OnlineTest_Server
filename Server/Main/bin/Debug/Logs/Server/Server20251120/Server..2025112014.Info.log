@@ -1,0 +1,587 @@
+2025-11-20 14:13:57.5721  
+
+==========================================================================
+ 
+  ███████╗ █████╗ ███╗   ██╗████████╗ █████╗  ██████╗ ██╗   ██╗
+  ██╔════╝██╔══██╗████╗  ██║╚══██╔══╝██╔══██╗██╔════╝ ╚██╗ ██╔╝
+  █████╗  ███████║██╔██╗ ██║   ██║   ███████║╚█████╗   ╚████╔╝ 
+  ██╔══╝  ██╔══██║██║╚██╗██║   ██║   ██╔══██║╚════██║   ╚██╔╝  
+  ██║     ██║  ██║██║ ╚████║   ██║   ██║  ██║██████╔╝    ██║   
+  ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═════╝     ╚═╝   
+                                                            
+ Version : Fantasy 2.0 Official version
+==========================================================================
+
+2025-11-20 14:13:57.6174  Current inner network protocol:TCP
+2025-11-20 14:13:57.6174  Max Message Size(byte):1048560
+2025-11-20 14:13:57.6174  Current session idle timeout:8000
+2025-11-20 14:13:57.6174  Session-check interval:5000 
+2025-11-20 14:13:58.2574  SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-11-20 14:13:58.5661  SceneConfigId = 1001 networkTarget = Outer KCPServer Listen 127.0.0.1:20000
+2025-11-20 14:13:58.5661  Process:1 Startup Complete SceneCount:1
+2025-11-20 14:14:09.2851 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -0.19999999 , 0 , 0
+2025-11-20 14:14:09.3537 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -0.39999998 , 0 , 0
+2025-11-20 14:14:09.4452 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -0.59999996 , 0 , 0
+2025-11-20 14:14:09.5528 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -0.79999995 , 0 , 0
+2025-11-20 14:14:09.6607 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -0.99999994 , 0 , 0
+2025-11-20 14:14:09.7555 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -1.1999999 , 0 , 0
+2025-11-20 14:14:09.8479 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -1.3999999 , 0 , 0
+2025-11-20 14:14:09.9562 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -1.5999999 , 0 , 0
+2025-11-20 14:14:10.0492 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -1.8 , 0 , 0
+2025-11-20 14:14:10.1585 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -2 , 0 , 0
+2025-11-20 14:14:10.2522 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -2.2 , 0 , 0
+2025-11-20 14:14:10.3447 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -2.2 , 0 , 0
+2025-11-20 14:14:10.8567 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -2.4 , 0 , 0
+2025-11-20 14:14:10.9494 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -2.6000001 , 0 , 0
+2025-11-20 14:14:11.0584 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -2.8000002 , 0 , 0
+2025-11-20 14:14:11.1516 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.0000002 , 0 , 0
+2025-11-20 14:14:11.2603 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.2000003 , 0 , 0
+2025-11-20 14:14:11.3533 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.4000003 , 0 , 0
+2025-11-20 14:14:11.4452 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.4000003 , 0 , 0.19999999
+2025-11-20 14:14:11.5543 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.4000003 , 0 , 0.39999998
+2025-11-20 14:14:11.6635 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.4000003 , 0 , 0.59999996
+2025-11-20 14:14:11.7576 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.4000003 , 0 , 0.79999995
+2025-11-20 14:14:11.8514 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.4000003 , 0 , 0.99999994
+2025-11-20 14:14:11.9598 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.4000003 , 0 , 1.1999999
+2025-11-20 14:14:12.0514 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.4000003 , 0 , 1.3999999
+2025-11-20 14:14:12.1594 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.4000003 , 0 , 1.5999999
+2025-11-20 14:14:12.2516 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.5414217 , 0 , 1.7414212
+2025-11-20 14:14:12.3445 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.682843 , 0 , 1.8828425
+2025-11-20 14:14:12.4530 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.8242643 , 0 , 2.0242639
+2025-11-20 14:14:12.5596 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.9656856 , 0 , 2.1656852
+2025-11-20 14:14:12.6538 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.9656856 , 0 , 2.1656852
+2025-11-20 14:14:13.0570 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.7656856 , 0 , 2.1656852
+2025-11-20 14:14:13.1494 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.5656855 , 0 , 2.1656852
+2025-11-20 14:14:13.2595 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.3656855 , 0 , 2.1656852
+2025-11-20 14:14:13.3524 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.1656854 , 0 , 2.1656852
+2025-11-20 14:14:13.4458 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.1656854 , 0 , 1.9656851
+2025-11-20 14:14:13.5543 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.1656854 , 0 , 1.7656851
+2025-11-20 14:14:13.6476 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.1656854 , 0 , 1.565685
+2025-11-20 14:14:13.7565 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.1656854 , 0 , 1.565685
+2025-11-20 14:14:14.0494 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.3656855 , 0 , 1.565685
+2025-11-20 14:14:14.1586 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.5656855 , 0 , 1.565685
+2025-11-20 14:14:14.2529 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.7656856 , 0 , 1.565685
+2025-11-20 14:14:14.3456 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -3.9656856 , 0 , 1.565685
+2025-11-20 14:14:14.4523 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -4.1656857 , 0 , 1.565685
+2025-11-20 14:14:14.5454 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -4.1656857 , 0 , 1.565685
+2025-11-20 14:14:14.7626 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -4.1656857 , 0 , 1.7656851
+2025-11-20 14:14:14.8562 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -4.1656857 , 0 , 1.9656851
+2025-11-20 14:14:14.9637 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -4.1656857 , 0 , 2.1656852
+2025-11-20 14:14:15.0563 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -4.1656857 , 0 , 2.3656852
+2025-11-20 14:14:15.1647 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -4.1656857 , 0 , 2.5656853
+2025-11-20 14:14:15.2579 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -4.1656857 , 0 , 2.7656853
+2025-11-20 14:14:15.3505 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -4.1656857 , 0 , 2.7656853
+2025-11-20 14:14:15.7496 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -4.3656855 , 0 , 2.7656853
+2025-11-20 14:14:15.8590 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -4.5656853 , 0 , 2.7656853
+2025-11-20 14:14:15.9648 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -4.765685 , 0 , 2.7656853
+2025-11-20 14:14:16.0600 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -4.965685 , 0 , 2.7656853
+2025-11-20 14:14:16.1521 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -5.1656847 , 0 , 2.7656853
+2025-11-20 14:14:16.2622 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -5.1656847 , 0 , 2.7656853
+2025-11-20 14:14:16.3564 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479827699257573376 移动到新位置: -4.965685 , 0 , 2.7656853
+2025-11-20 14:14:16.4655 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.765685 , 0 , 2.7656853
+2025-11-20 14:14:16.5590 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.5656853 , 0 , 2.7656853
+2025-11-20 14:14:16.6666 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.3656855 , 0 , 2.7656853
+2025-11-20 14:14:16.7448 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.1656857 , 0 , 2.7656853
+2025-11-20 14:14:16.8523 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.1656857 , 0 , 2.7656853
+2025-11-20 14:14:17.0540 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.1656857 , 0 , 2.5656853
+2025-11-20 14:14:17.1462 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.1656857 , 0 , 2.3656852
+2025-11-20 14:14:17.2568 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.1656857 , 0 , 2.1656852
+2025-11-20 14:14:17.3490 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.1656857 , 0 , 1.9656851
+2025-11-20 14:14:17.4568 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.1656857 , 0 , 1.7656851
+2025-11-20 14:14:17.5641 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.1656857 , 0 , 1.7656851
+2025-11-20 14:14:17.8573 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.3656855 , 0 , 1.7656851
+2025-11-20 14:14:17.9495 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.5656853 , 0 , 1.7656851
+2025-11-20 14:14:18.0588 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.765685 , 0 , 1.7656851
+2025-11-20 14:14:18.1527 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.765685 , 0 , 1.7656851
+2025-11-20 14:14:18.3555 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.765685 , 0 , 1.9656851
+2025-11-20 14:14:18.4633 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.765685 , 0 , 2.1656852
+2025-11-20 14:14:18.5705 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.765685 , 0 , 2.3656852
+2025-11-20 14:14:18.6631 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.765685 , 0 , 2.5656853
+2025-11-20 14:14:18.7579 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.765685 , 0 , 2.7656853
+2025-11-20 14:14:18.8508 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.765685 , 0 , 2.7656853
+2025-11-20 14:14:19.2526 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.5656853 , 0 , 2.7656853
+2025-11-20 14:14:19.3606 (StateSyncRequestHandler.cs:17) 玩家ID:479827699257573376 移动到新位置: -4.5656853 , 0 , 2.7656853
+2025-11-20 14:17:06.3168  
+
+==========================================================================
+ 
+  ███████╗ █████╗ ███╗   ██╗████████╗ █████╗  ██████╗ ██╗   ██╗
+  ██╔════╝██╔══██╗████╗  ██║╚══██╔══╝██╔══██╗██╔════╝ ╚██╗ ██╔╝
+  █████╗  ███████║██╔██╗ ██║   ██║   ███████║╚█████╗   ╚████╔╝ 
+  ██╔══╝  ██╔══██║██║╚██╗██║   ██║   ██╔══██║╚════██║   ╚██╔╝  
+  ██║     ██║  ██║██║ ╚████║   ██║   ██║  ██║██████╔╝    ██║   
+  ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═════╝     ╚═╝   
+                                                            
+ Version : Fantasy 2.0 Official version
+==========================================================================
+
+2025-11-20 14:17:06.3896  Current inner network protocol:TCP
+2025-11-20 14:17:06.3896  Max Message Size(byte):1048560
+2025-11-20 14:17:06.3896  Current session idle timeout:8000
+2025-11-20 14:17:06.3896  Session-check interval:5000 
+2025-11-20 14:17:07.2348  SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-11-20 14:17:07.6027  SceneConfigId = 1001 networkTarget = Outer KCPServer Listen 127.0.0.1:20000
+2025-11-20 14:17:07.6027  Process:1 Startup Complete SceneCount:1
+2025-11-20 14:17:21.7817 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -0.19999999 , 0 , 0
+2025-11-20 14:17:21.8506 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -0.39999998 , 0 , 0
+2025-11-20 14:17:21.9398 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -0.59999996 , 0 , 0
+2025-11-20 14:17:22.0517 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -0.79999995 , 0 , 0
+2025-11-20 14:17:22.1415 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -0.99999994 , 0 , 0
+2025-11-20 14:17:22.2427 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -1.1999999 , 0 , 0
+2025-11-20 14:17:22.3463 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -1.3999999 , 0 , 0
+2025-11-20 14:17:22.4495 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -1.5999999 , 0 , 0
+2025-11-20 14:17:22.5529 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -1.5999999 , 0 , 0
+2025-11-20 14:17:48.2474 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -1.8 , 0 , 0
+2025-11-20 14:17:48.3550 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -2 , 0 , 0
+2025-11-20 14:17:48.4630 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -2.2 , 0 , 0
+2025-11-20 14:17:48.5547 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -2.4 , 0 , 0
+2025-11-20 14:17:48.6467 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -2.4 , 0 , 0
+2025-11-20 14:17:57.4475 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -2.6000001 , 0 , 0
+2025-11-20 14:17:57.5567 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -2.8000002 , 0 , 0
+2025-11-20 14:17:57.6474 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -3.0000002 , 0 , 0
+2025-11-20 14:17:57.7540 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -3.2000003 , 0 , 0
+2025-11-20 14:17:57.8467 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -3.2000003 , 0 , 0
+2025-11-20 14:17:58.1428 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -3.0000002 , 0 , 0
+2025-11-20 14:17:58.2647 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -2.8000002 , 0 , 0
+2025-11-20 14:17:58.3431 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -2.8000002 , 0 , 0
+2025-11-20 14:17:58.4523 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -2.8000002 , 0 , -0.19999999
+2025-11-20 14:17:58.5609 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -2.8000002 , 0 , -0.39999998
+2025-11-20 14:17:58.6550 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -2.8000002 , 0 , -0.59999996
+2025-11-20 14:17:58.7470 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -2.8000002 , 0 , -0.79999995
+2025-11-20 14:17:58.8559 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -2.8000002 , 0 , -0.79999995
+2025-11-20 14:18:08.0464 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -3.0000002 , 0 , -0.79999995
+2025-11-20 14:18:08.1565 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479830997792456704 移动到新位置: -3.0000002 , 0 , -0.79999995
+2025-11-20 14:20:10.1194 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479833901190348800 移动到新位置: -0.19999999 , 0 , 0
+2025-11-20 14:20:10.1982 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479833901190348800 移动到新位置: -0.39999998 , 0 , 0
+2025-11-20 14:20:10.3227 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479833901190348800 移动到新位置: -0.59999996 , 0 , 0
+2025-11-20 14:20:10.4177 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479833901190348800 移动到新位置: -0.79999995 , 0 , 0
+2025-11-20 14:20:10.5107 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479833901190348800 移动到新位置: -0.99999994 , 0 , 0
+2025-11-20 14:20:10.6059 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479833901190348800 移动到新位置: -1.1999999 , 0 , 0
+2025-11-20 14:20:10.6979 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479833901190348800 移动到新位置: -1.3999999 , 0 , 0
+2025-11-20 14:20:10.8063 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479833901190348800 移动到新位置: -1.5999999 , 0 , 0
+2025-11-20 14:20:10.9154 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479833901190348800 移动到新位置: -1.8 , 0 , 0
+2025-11-20 14:20:11.0094 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479833901190348800 移动到新位置: -2 , 0 , 0
+2025-11-20 14:20:11.1014 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479833901190348800 移动到新位置: -2.2 , 0 , 0
+2025-11-20 14:20:11.2095 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479833901190348800 移动到新位置: -2.4 , 0 , 0
+2025-11-20 14:20:11.3018 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479833901190348800 移动到新位置: -2.6000001 , 0 , 0
+2025-11-20 14:20:11.4101 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479833901190348800 移动到新位置: -2.8000002 , 0 , 0
+2025-11-20 14:20:11.5186 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479833901190348800 移动到新位置: -3.0000002 , 0 , 0
+2025-11-20 14:20:11.6115 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479833901190348800 移动到新位置: -3.2000003 , 0 , 0
+2025-11-20 14:20:11.7054 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479833901190348800 移动到新位置: -3.2000003 , 0 , 0
+2025-11-20 14:22:46.0703  
+
+==========================================================================
+ 
+  ███████╗ █████╗ ███╗   ██╗████████╗ █████╗  ██████╗ ██╗   ██╗
+  ██╔════╝██╔══██╗████╗  ██║╚══██╔══╝██╔══██╗██╔════╝ ╚██╗ ██╔╝
+  █████╗  ███████║██╔██╗ ██║   ██║   ███████║╚█████╗   ╚████╔╝ 
+  ██╔══╝  ██╔══██║██║╚██╗██║   ██║   ██╔══██║╚════██║   ╚██╔╝  
+  ██║     ██║  ██║██║ ╚████║   ██║   ██║  ██║██████╔╝    ██║   
+  ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═════╝     ╚═╝   
+                                                            
+ Version : Fantasy 2.0 Official version
+==========================================================================
+
+2025-11-20 14:22:46.1068  Current inner network protocol:TCP
+2025-11-20 14:22:46.1068  Max Message Size(byte):1048560
+2025-11-20 14:22:46.1068  Current session idle timeout:8000
+2025-11-20 14:22:46.1068  Session-check interval:5000 
+2025-11-20 14:22:46.7107  SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-11-20 14:22:47.0723  SceneConfigId = 1001 networkTarget = Outer KCPServer Listen 127.0.0.1:20000
+2025-11-20 14:22:47.0723  Process:1 Startup Complete SceneCount:1
+2025-11-20 14:22:59.7646 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -0.19999999 , 0 , 0
+2025-11-20 14:22:59.8465 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -0.39999998 , 0 , 0
+2025-11-20 14:22:59.9378 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -0.59999996 , 0 , 0
+2025-11-20 14:23:00.0399 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -0.79999995 , 0 , 0
+2025-11-20 14:23:00.1402 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -0.99999994 , 0 , 0
+2025-11-20 14:23:00.2369 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -1.1999999 , 0 , 0
+2025-11-20 14:23:00.3440 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -1.3999999 , 0 , 0
+2025-11-20 14:23:00.4494 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -1.5999999 , 0 , 0
+2025-11-20 14:23:00.5382 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -1.8 , 0 , 0
+2025-11-20 14:23:00.6450 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -1.9414213 , 0 , 0.14142135
+2025-11-20 14:23:00.7378 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -2.0828426 , 0 , 0.2828427
+2025-11-20 14:23:00.8467 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -2.224264 , 0 , 0.42426404
+2025-11-20 14:23:00.9470 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -2.3656852 , 0 , 0.5656854
+2025-11-20 14:23:01.0443 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -2.5071065 , 0 , 0.7071067
+2025-11-20 14:23:01.1402 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -2.6485279 , 0 , 0.848528
+2025-11-20 14:23:01.2402 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -2.7899492 , 0 , 0.98994935
+2025-11-20 14:23:01.3405 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -2.9899492 , 0 , 0.98994935
+2025-11-20 14:23:01.4357 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -3.1899493 , 0 , 0.98994935
+2025-11-20 14:23:01.5457 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -3.3313706 , 0 , 0.848528
+2025-11-20 14:23:01.6390 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -3.472792 , 0 , 0.7071067
+2025-11-20 14:23:01.7438 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -3.6142132 , 0 , 0.5656854
+2025-11-20 14:23:01.8437 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -3.8142133 , 0 , 0.5656854
+2025-11-20 14:23:01.9419 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -4.014213 , 0 , 0.5656854
+2025-11-20 14:23:02.0366 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -4.1556344 , 0 , 0.7071067
+2025-11-20 14:23:02.1430 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -4.2970557 , 0 , 0.848528
+2025-11-20 14:23:02.2452 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -4.438477 , 0 , 0.98994935
+2025-11-20 14:23:02.3431 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -4.5798984 , 0 , 1.1313707
+2025-11-20 14:23:02.4374 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -4.7213197 , 0 , 1.272792
+2025-11-20 14:23:02.5374 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -4.862741 , 0 , 1.4142133
+2025-11-20 14:23:02.6366 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -4.862741 , 0 , 1.6142132
+2025-11-20 14:23:02.7453 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -4.862741 , 0 , 1.8142133
+2025-11-20 14:23:02.8379 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -4.862741 , 0 , 2.0142133
+2025-11-20 14:23:02.9543 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -4.862741 , 0 , 2.2142134
+2025-11-20 14:23:03.0394 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -5.0041623 , 0 , 2.3556347
+2025-11-20 14:23:03.1387 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -5.204162 , 0 , 2.3556347
+2025-11-20 14:23:03.2457 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479836804588240896 移动到新位置: -5.204162 , 0 , 2.3556347
+2025-11-20 14:23:28.4190 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 0.19999999 , 0 , 0
+2025-11-20 14:23:28.5121 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 0.39999998 , 0 , 0
+2025-11-20 14:23:28.6077 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 0.59999996 , 0 , 0
+2025-11-20 14:23:28.7164 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 0.79999995 , 0 , 0
+2025-11-20 14:23:28.8096 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 0.99999994 , 0 , 0
+2025-11-20 14:23:28.9029 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 1.1999999 , 0 , 0
+2025-11-20 14:23:29.0116 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 1.1999999 , 0 , 0
+2025-11-20 14:23:29.8070 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 0.99999994 , 0 , 0
+2025-11-20 14:23:29.9153 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 0.79999995 , 0 , 0
+2025-11-20 14:23:30.0092 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 0.59999996 , 0 , 0
+2025-11-20 14:23:30.1184 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 0.39999998 , 0 , 0
+2025-11-20 14:23:30.2118 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 0.19999999 , 0 , 0
+2025-11-20 14:23:30.3210 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 0 , 0 , 0
+2025-11-20 14:23:30.4174 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 0 , 0 , 0
+2025-11-20 14:23:30.9147 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 0.19999999 , 0 , 0
+2025-11-20 14:23:31.0071 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 0.39999998 , 0 , 0
+2025-11-20 14:23:31.1005 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 0.59999996 , 0 , 0
+2025-11-20 14:23:31.2097 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 0.79999995 , 0 , 0
+2025-11-20 14:23:31.3033 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 0.99999994 , 0 , 0
+2025-11-20 14:23:31.4285 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 1.1999999 , 0 , 0
+2025-11-20 14:23:31.5197 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 1.3999999 , 0 , 0
+2025-11-20 14:23:31.6122 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479837216905101312 移动到新位置: 1.5999999 , 0 , 0
+2025-11-20 14:23:31.7214 (StateSyncRequestHandler.cs:17) 玩家ID:479837216905101312 移动到新位置: 1.8 , 0 , 0
+2025-11-20 14:23:31.8134 (StateSyncRequestHandler.cs:17) 玩家ID:479837216905101312 移动到新位置: 1.8 , 0 , 0
+2025-11-20 14:23:35.5155 (StateSyncRequestHandler.cs:17) 玩家ID:479837216905101312 移动到新位置: 2 , 0 , 0
+2025-11-20 14:23:35.6070 (StateSyncRequestHandler.cs:17) 玩家ID:479837216905101312 移动到新位置: 2.2 , 0 , 0
+2025-11-20 14:23:35.7013 (StateSyncRequestHandler.cs:17) 玩家ID:479837216905101312 移动到新位置: 2.4 , 0 , 0
+2025-11-20 14:23:35.8096 (StateSyncRequestHandler.cs:17) 玩家ID:479837216905101312 移动到新位置: 2.6000001 , 0 , 0
+2025-11-20 14:23:35.9187 (StateSyncRequestHandler.cs:17) 玩家ID:479837216905101312 移动到新位置: 2.8000002 , 0 , 0
+2025-11-20 14:23:36.0263 (StateSyncRequestHandler.cs:17) 玩家ID:479837216905101312 移动到新位置: 3.0000002 , 0 , 0
+2025-11-20 14:23:36.1041 (StateSyncRequestHandler.cs:17) 玩家ID:479837216905101312 移动到新位置: 3.2000003 , 0 , 0
+2025-11-20 14:23:36.2121 (StateSyncRequestHandler.cs:17) 玩家ID:479837216905101312 移动到新位置: 3.4000003 , 0 , 0
+2025-11-20 14:23:36.3189 (StateSyncRequestHandler.cs:17) 玩家ID:479837216905101312 移动到新位置: 3.4000003 , 0 , 0
+2025-11-20 14:38:40.7778  
+
+==========================================================================
+ 
+  ███████╗ █████╗ ███╗   ██╗████████╗ █████╗  ██████╗ ██╗   ██╗
+  ██╔════╝██╔══██╗████╗  ██║╚══██╔══╝██╔══██╗██╔════╝ ╚██╗ ██╔╝
+  █████╗  ███████║██╔██╗ ██║   ██║   ███████║╚█████╗   ╚████╔╝ 
+  ██╔══╝  ██╔══██║██║╚██╗██║   ██║   ██╔══██║╚════██║   ╚██╔╝  
+  ██║     ██║  ██║██║ ╚████║   ██║   ██║  ██║██████╔╝    ██║   
+  ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═════╝     ╚═╝   
+                                                            
+ Version : Fantasy 2.0 Official version
+==========================================================================
+
+2025-11-20 14:38:40.8385  Current inner network protocol:TCP
+2025-11-20 14:38:40.8385  Max Message Size(byte):1048560
+2025-11-20 14:38:40.8385  Current session idle timeout:8000
+2025-11-20 14:38:40.8385  Session-check interval:5000 
+2025-11-20 14:38:41.6538  SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-11-20 14:38:41.9566  SceneConfigId = 1001 networkTarget = Outer KCPServer Listen 127.0.0.1:20000
+2025-11-20 14:38:41.9566  Process:1 Startup Complete SceneCount:1
+2025-11-20 14:38:50.9855 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -0.19999999 , 0 , 0
+2025-11-20 14:38:51.0464 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -0.39999998 , 0 , 0
+2025-11-20 14:38:51.1445 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -0.59999996 , 0 , 0
+2025-11-20 14:38:51.2479 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -0.79999995 , 0 , 0
+2025-11-20 14:38:51.3566 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -0.99999994 , 0 , 0
+2025-11-20 14:38:51.4549 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -1.1999999 , 0 , 0
+2025-11-20 14:38:51.5441 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -1.3999999 , 0 , 0
+2025-11-20 14:38:51.6533 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -1.3999999 , 0 , 0
+2025-11-20 14:38:51.9542 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -1.1999998 , 0 , 0
+2025-11-20 14:38:52.0495 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -0.9999998 , 0 , 0
+2025-11-20 14:38:52.1507 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -0.79999983 , 0 , 0
+2025-11-20 14:38:52.2465 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -0.59999985 , 0 , 0
+2025-11-20 14:38:52.3428 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -0.39999986 , 0 , 0
+2025-11-20 14:38:52.4504 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -0.19999987 , 0 , 0
+2025-11-20 14:38:52.5493 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: 1.1920929E-07 , 0 , 0
+2025-11-20 14:38:52.6553 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: 0.2000001 , 0 , 0
+2025-11-20 14:38:52.7439 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: 0.4000001 , 0 , 0
+2025-11-20 14:38:52.8543 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: 0.4000001 , 0 , 0
+2025-11-20 14:38:53.2540 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: 0.4000001 , 0 , -0.19999999
+2025-11-20 14:38:53.3538 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: 0.4000001 , 0 , -0.39999998
+2025-11-20 14:38:53.4433 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: 0.4000001 , 0 , -0.59999996
+2025-11-20 14:38:53.5507 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: 0.4000001 , 0 , -0.79999995
+2025-11-20 14:38:53.6461 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: 0.4000001 , 0 , -0.99999994
+2025-11-20 14:38:53.7544 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: 0.4000001 , 0 , -1.1999999
+2025-11-20 14:38:53.8528 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: 0.25857875 , 0 , -1.3414212
+2025-11-20 14:38:53.9471 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: 0.1171574 , 0 , -1.4828426
+2025-11-20 14:38:54.0521 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -0.024263948 , 0 , -1.6242639
+2025-11-20 14:38:54.1531 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -0.1656853 , 0 , -1.7656852
+2025-11-20 14:38:54.2535 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -0.30710664 , 0 , -1.9071065
+2025-11-20 14:38:54.3457 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -0.448528 , 0 , -2.048528
+2025-11-20 14:38:54.4514 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -0.58994937 , 0 , -2.1899493
+2025-11-20 14:38:54.5446 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -0.7313707 , 0 , -2.3313706
+2025-11-20 14:38:54.6444 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -0.872792 , 0 , -2.472792
+2025-11-20 14:38:54.7500 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -1.072792 , 0 , -2.472792
+2025-11-20 14:38:54.8484 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -1.2727921 , 0 , -2.472792
+2025-11-20 14:38:54.9476 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -1.4727921 , 0 , -2.472792
+2025-11-20 14:38:55.0505 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -1.6727922 , 0 , -2.472792
+2025-11-20 14:38:55.1417 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -1.8727922 , 0 , -2.472792
+2025-11-20 14:38:55.2469 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -2.0727923 , 0 , -2.472792
+2025-11-20 14:38:55.3486 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -2.2727923 , 0 , -2.472792
+2025-11-20 14:38:55.4496 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -2.4727924 , 0 , -2.472792
+2025-11-20 14:38:55.5516 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -2.6727924 , 0 , -2.472792
+2025-11-20 14:38:55.6477 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -2.8727925 , 0 , -2.472792
+2025-11-20 14:38:55.7528 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -3.0727925 , 0 , -2.472792
+2025-11-20 14:38:55.8500 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -3.2727926 , 0 , -2.472792
+2025-11-20 14:38:55.9535 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -3.4727926 , 0 , -2.472792
+2025-11-20 14:38:56.0448 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -3.6727927 , 0 , -2.472792
+2025-11-20 14:38:56.1454 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -3.814214 , 0 , -2.6142132
+2025-11-20 14:38:56.2507 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -3.9556353 , 0 , -2.7556345
+2025-11-20 14:38:56.3486 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -4.097057 , 0 , -2.8970559
+2025-11-20 14:38:56.4429 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -4.238478 , 0 , -3.0384772
+2025-11-20 14:38:56.5508 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -4.3798995 , 0 , -3.1798985
+2025-11-20 14:38:56.6522 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -3.3213198
+2025-11-20 14:38:56.7484 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -3.5213199
+2025-11-20 14:38:56.8492 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -3.72132
+2025-11-20 14:38:56.9486 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -3.92132
+2025-11-20 14:38:57.0438 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -4.12132
+2025-11-20 14:38:57.1517 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -4.3213196
+2025-11-20 14:38:57.2520 (LobbyPlayerManagerComponentSystem.cs:67) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -4.5213194
+2025-11-20 14:38:57.3497 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -4.721319
+2025-11-20 14:38:57.4522 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -4.921319
+2025-11-20 14:38:57.5439 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -5.121319
+2025-11-20 14:38:57.6451 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -5.3213186
+2025-11-20 14:38:57.7461 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -5.3213186
+2025-11-20 14:38:58.2431 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -5.121319
+2025-11-20 14:38:58.3509 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -4.921319
+2025-11-20 14:38:58.4430 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -4.721319
+2025-11-20 14:38:58.5494 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -4.5213194
+2025-11-20 14:38:58.6495 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -4.3213196
+2025-11-20 14:38:58.7503 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -4.12132
+2025-11-20 14:38:58.8540 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -3.9213197
+2025-11-20 14:38:58.9537 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -3.7213197
+2025-11-20 14:38:59.0482 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -3.5213196
+2025-11-20 14:38:59.1452 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -3.3213196
+2025-11-20 14:38:59.2501 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -3.1213195
+2025-11-20 14:38:59.3520 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -2.9213195
+2025-11-20 14:38:59.4484 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -2.7213194
+2025-11-20 14:38:59.5505 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -2.5213194
+2025-11-20 14:38:59.6454 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -2.3213193
+2025-11-20 14:38:59.7487 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -2.1213193
+2025-11-20 14:38:59.8500 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -1.9213192
+2025-11-20 14:38:59.9456 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -1.9213192
+2025-11-20 14:39:00.6522 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.7213206 , 0 , -1.9213192
+2025-11-20 14:39:00.7551 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.7213206 , 0 , -1.9213192
+2025-11-20 14:39:01.2519 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -1.9213192
+2025-11-20 14:39:01.3443 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.521321 , 0 , -1.9213192
+2025-11-20 14:39:14.6511 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.321321 , 0 , -1.9213192
+2025-11-20 14:39:14.7452 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -4.121321 , 0 , -1.9213192
+2025-11-20 14:39:14.8550 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -3.9213212 , 0 , -1.9213192
+2025-11-20 14:39:14.9477 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -3.721321 , 0 , -1.9213192
+2025-11-20 14:39:15.0420 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -3.521321 , 0 , -1.9213192
+2025-11-20 14:39:15.1457 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -3.321321 , 0 , -1.9213192
+2025-11-20 14:39:15.2530 (StateSyncRequestHandler.cs:17) 玩家ID:479853159823704064 移动到新位置: -3.321321 , 0 , -1.9213192
+2025-11-20 14:39:51.1437 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -0.19999999 , 0 , 0
+2025-11-20 14:39:51.2383 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -0.39999998 , 0 , 0
+2025-11-20 14:39:51.3446 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -0.59999996 , 0 , 0
+2025-11-20 14:39:51.4392 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -0.79999995 , 0 , 0
+2025-11-20 14:39:51.5333 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -0.99999994 , 0 , 0
+2025-11-20 14:39:51.6369 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -0.99999994 , 0 , 0
+2025-11-20 14:39:52.0335 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -0.99999994 , 0 , -0.19999999
+2025-11-20 14:39:52.1430 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -0.99999994 , 0 , -0.19999999
+2025-11-20 14:39:58.5408 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -1.1999999 , 0 , -0.19999999
+2025-11-20 14:39:58.6351 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -1.3999999 , 0 , -0.19999999
+2025-11-20 14:39:58.7423 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -1.5999999 , 0 , -0.19999999
+2025-11-20 14:39:58.8378 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -1.8 , 0 , -0.19999999
+2025-11-20 14:39:58.9327 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -2 , 0 , -0.19999999
+2025-11-20 14:39:59.0440 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -2.2 , 0 , -0.19999999
+2025-11-20 14:39:59.1434 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -2.4 , 0 , -0.19999999
+2025-11-20 14:39:59.2409 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -2.6000001 , 0 , -0.19999999
+2025-11-20 14:39:59.3448 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -2.8000002 , 0 , -0.19999999
+2025-11-20 14:39:59.4368 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -2.8000002 , 0 , -0.39999998
+2025-11-20 14:39:59.5355 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -2.8000002 , 0 , -0.59999996
+2025-11-20 14:39:59.6442 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -2.8000002 , 0 , -0.79999995
+2025-11-20 14:39:59.7351 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -2.8000002 , 0 , -0.99999994
+2025-11-20 14:39:59.8335 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -2.8000002 , 0 , -1.1999999
+2025-11-20 14:39:59.9356 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -2.8000002 , 0 , -1.3999999
+2025-11-20 14:40:00.0436 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -2.8000002 , 0 , -1.5999999
+2025-11-20 14:40:00.1441 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -2.8000002 , 0 , -1.8
+2025-11-20 14:40:00.2339 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -2.9414215 , 0 , -1.9414213
+2025-11-20 14:40:00.3395 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -3.0828428 , 0 , -2.0828426
+2025-11-20 14:40:00.4346 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -3.2242641 , 0 , -2.224264
+2025-11-20 14:40:00.5337 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -3.4242642 , 0 , -2.224264
+2025-11-20 14:40:00.6417 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -3.6242642 , 0 , -2.224264
+2025-11-20 14:40:00.7382 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -3.7656856 , 0 , -2.3656852
+2025-11-20 14:40:00.8369 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -3.7656856 , 0 , -2.5656853
+2025-11-20 14:40:00.9435 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -3.7656856 , 0 , -2.7656853
+2025-11-20 14:40:01.0408 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -3.6242642 , 0 , -2.9071066
+2025-11-20 14:40:01.1356 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -3.482843 , 0 , -3.048528
+2025-11-20 14:40:01.2418 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -3.2828429 , 0 , -3.048528
+2025-11-20 14:40:01.3421 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -3.0828428 , 0 , -3.048528
+2025-11-20 14:40:01.4391 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -3.0828428 , 0 , -3.248528
+2025-11-20 14:40:01.5436 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -3.0828428 , 0 , -3.448528
+2025-11-20 14:40:01.6381 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -3.0828428 , 0 , -3.648528
+2025-11-20 14:40:01.7434 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -3.2242641 , 0 , -3.7899494
+2025-11-20 14:40:01.8437 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -3.3656855 , 0 , -3.9313707
+2025-11-20 14:40:01.9365 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -3.5071068 , 0 , -4.072792
+2025-11-20 14:40:02.0434 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -3.648528 , 0 , -4.2142134
+2025-11-20 14:40:02.1368 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -3.7899494 , 0 , -4.3556347
+2025-11-20 14:40:02.2428 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -3.9313707 , 0 , -4.497056
+2025-11-20 14:40:02.3433 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -4.072792 , 0 , -4.6384773
+2025-11-20 14:40:02.4332 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -4.2142134 , 0 , -4.7798986
+2025-11-20 14:40:02.5442 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -4.2142134 , 0 , -4.9798985
+2025-11-20 14:40:02.6393 (StateSyncRequestHandler.cs:17) 玩家ID:479854173435985920 移动到新位置: -4.2142134 , 0 , -4.9798985
+2025-11-20 14:58:15.3310  
+
+==========================================================================
+ 
+  ███████╗ █████╗ ███╗   ██╗████████╗ █████╗  ██████╗ ██╗   ██╗
+  ██╔════╝██╔══██╗████╗  ██║╚══██╔══╝██╔══██╗██╔════╝ ╚██╗ ██╔╝
+  █████╗  ███████║██╔██╗ ██║   ██║   ███████║╚█████╗   ╚████╔╝ 
+  ██╔══╝  ██╔══██║██║╚██╗██║   ██║   ██╔══██║╚════██║   ╚██╔╝  
+  ██║     ██║  ██║██║ ╚████║   ██║   ██║  ██║██████╔╝    ██║   
+  ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═════╝     ╚═╝   
+                                                            
+ Version : Fantasy 2.0 Official version
+==========================================================================
+
+2025-11-20 14:58:15.4016  Current inner network protocol:TCP
+2025-11-20 14:58:15.4016  Max Message Size(byte):1048560
+2025-11-20 14:58:15.4016  Current session idle timeout:8000
+2025-11-20 14:58:15.4016  Session-check interval:5000 
+2025-11-20 14:58:16.1328  SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-11-20 14:58:16.4517  SceneConfigId = 1001 networkTarget = Outer KCPServer Listen 127.0.0.1:20000
+2025-11-20 14:58:16.4517  Process:1 Startup Complete SceneCount:1
+2025-11-20 14:58:27.2947 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: 0 , 0 , -0.19999999
+2025-11-20 14:58:27.3433 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: 0 , 0 , -0.39999998
+2025-11-20 14:58:27.4527 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: 0 , 0 , -0.59999996
+2025-11-20 14:58:27.5450 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: 0 , 0 , -0.79999995
+2025-11-20 14:58:27.6426 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: 0 , 0 , -0.99999994
+2025-11-20 14:58:27.7468 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: 0 , 0 , -1.1999999
+2025-11-20 14:58:27.8552 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: 0 , 0 , -1.1999999
+2025-11-20 14:58:28.3550 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -0.19999999 , 0 , -1.1999999
+2025-11-20 14:58:28.4484 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -0.39999998 , 0 , -1.1999999
+2025-11-20 14:58:28.5572 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -0.59999996 , 0 , -1.1999999
+2025-11-20 14:58:28.6482 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -0.79999995 , 0 , -1.1999999
+2025-11-20 14:58:28.7577 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -0.99999994 , 0 , -1.1999999
+2025-11-20 14:58:28.8518 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -1.1999999 , 0 , -1.1999999
+2025-11-20 14:58:28.9445 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -1.1999999 , 0 , -1.1999999
+2025-11-20 14:58:29.4543 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -1.1999999 , 0 , -1.3999999
+2025-11-20 14:58:29.5465 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -1.1999999 , 0 , -1.5999999
+2025-11-20 14:58:29.6405 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -1.1999999 , 0 , -1.8
+2025-11-20 14:58:29.7491 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -1.1999999 , 0 , -2
+2025-11-20 14:58:29.8422 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -1.1999999 , 0 , -2.2
+2025-11-20 14:58:29.9511 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -1.3414212 , 0 , -2.3414214
+2025-11-20 14:58:30.0436 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -1.4828426 , 0 , -2.4828427
+2025-11-20 14:58:30.1374 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -1.6242639 , 0 , -2.624264
+2025-11-20 14:58:30.2479 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -1.7656852 , 0 , -2.7656853
+2025-11-20 14:58:30.3410 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -1.9071065 , 0 , -2.9071066
+2025-11-20 14:58:30.4485 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -2.048528 , 0 , -3.048528
+2025-11-20 14:58:30.5572 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -2.1899493 , 0 , -3.1899493
+2025-11-20 14:58:30.6356 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -2.3313706 , 0 , -3.3313706
+2025-11-20 14:58:30.7440 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -2.472792 , 0 , -3.472792
+2025-11-20 14:58:30.8506 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -2.6142132 , 0 , -3.6142132
+2025-11-20 14:58:30.9430 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -2.6142132 , 0 , -3.8142133
+2025-11-20 14:58:31.0514 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -2.6142132 , 0 , -4.014213
+2025-11-20 14:58:31.1435 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -2.6142132 , 0 , -4.214213
+2025-11-20 14:58:31.2371 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -2.7556345 , 0 , -4.355634
+2025-11-20 14:58:31.3459 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -2.8970559 , 0 , -4.4970555
+2025-11-20 14:58:31.4373 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -3.097056 , 0 , -4.4970555
+2025-11-20 14:58:31.5444 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -3.297056 , 0 , -4.4970555
+2025-11-20 14:58:31.6523 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -3.497056 , 0 , -4.4970555
+2025-11-20 14:58:31.7619 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -3.697056 , 0 , -4.4970555
+2025-11-20 14:58:31.8406 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -3.897056 , 0 , -4.4970555
+2025-11-20 14:58:31.9495 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -4.097056 , 0 , -4.4970555
+2025-11-20 14:58:32.0578 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -4.2970557 , 0 , -4.4970555
+2025-11-20 14:58:32.1511 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -4.4970555 , 0 , -4.4970555
+2025-11-20 14:58:32.2467 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -4.6970553 , 0 , -4.4970555
+2025-11-20 14:58:32.3538 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -4.6970553 , 0 , -4.4970555
+2025-11-20 14:58:32.7575 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -4.4970555 , 0 , -4.4970555
+2025-11-20 14:58:32.8502 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -4.2970557 , 0 , -4.4970555
+2025-11-20 14:58:32.9447 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -4.097056 , 0 , -4.4970555
+2025-11-20 14:58:33.0536 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -3.8970559 , 0 , -4.4970555
+2025-11-20 14:58:33.1468 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -3.6970558 , 0 , -4.4970555
+2025-11-20 14:58:33.2559 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -3.6970558 , 0 , -4.4970555
+2025-11-20 14:58:33.4398 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -3.8970559 , 0 , -4.4970555
+2025-11-20 14:58:33.5493 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -4.097056 , 0 , -4.4970555
+2025-11-20 14:58:33.6418 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -4.2970557 , 0 , -4.4970555
+2025-11-20 14:58:33.7510 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -4.4970555 , 0 , -4.4970555
+2025-11-20 14:58:33.8454 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -4.4970555 , 0 , -4.4970555
+2025-11-20 14:58:33.9534 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -4.4970555 , 0 , -4.2970557
+2025-11-20 14:58:34.0474 (LobbyPlayerManagerComponentSystem.cs:77) 玩家ID:479873363349864448 移动到新位置: -4.4970555 , 0 , -4.097056
+2025-11-20 14:58:34.1395 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.4970555 , 0 , -3.8970559
+2025-11-20 14:58:34.2472 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.4970555 , 0 , -3.6970558
+2025-11-20 14:58:34.3399 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.4970555 , 0 , -3.4970558
+2025-11-20 14:58:34.4509 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.4970555 , 0 , -3.2970557
+2025-11-20 14:58:34.5441 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.4970555 , 0 , -3.0970557
+2025-11-20 14:58:34.6509 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.4970555 , 0 , -2.8970556
+2025-11-20 14:58:34.7437 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.4970555 , 0 , -2.8970556
+2025-11-20 14:58:35.2416 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.2970557 , 0 , -2.8970556
+2025-11-20 14:58:35.3485 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.2970557 , 0 , -2.8970556
+2025-11-20 14:58:35.7505 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.2970557 , 0 , -2.6970556
+2025-11-20 14:58:35.8432 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.2970557 , 0 , -2.4970555
+2025-11-20 14:58:35.9527 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.2970557 , 0 , -2.2970555
+2025-11-20 14:58:36.0454 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.2970557 , 0 , -2.0970554
+2025-11-20 14:58:36.1391 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.2970557 , 0 , -1.8970554
+2025-11-20 14:58:36.2482 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.2970557 , 0 , -1.6970553
+2025-11-20 14:58:36.3563 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.2970557 , 0 , -1.4970553
+2025-11-20 14:58:36.4492 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.2970557 , 0 , -1.4970553
+2025-11-20 14:58:36.7454 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.4970555 , 0 , -1.4970553
+2025-11-20 14:58:36.8534 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.4970555 , 0 , -1.4970553
+2025-11-20 14:59:09.5549 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.6970553 , 0 , -1.4970553
+2025-11-20 14:59:09.6471 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.897055 , 0 , -1.4970553
+2025-11-20 14:59:09.7409 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -5.097055 , 0 , -1.4970553
+2025-11-20 14:59:09.8483 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -5.297055 , 0 , -1.4970553
+2025-11-20 14:59:09.9561 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -5.297055 , 0 , -1.4970553
+2025-11-20 14:59:10.5482 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -5.097055 , 0 , -1.4970553
+2025-11-20 14:59:10.6415 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.897055 , 0 , -1.4970553
+2025-11-20 14:59:10.7366 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.897055 , 0 , -1.4970553
+2025-11-20 14:59:12.5610 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -5.097055 , 0 , -1.4970553
+2025-11-20 14:59:12.6375 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -5.297055 , 0 , -1.4970553
+2025-11-20 14:59:12.7462 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -5.297055 , 0 , -1.4970553
+2025-11-20 14:59:13.5510 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -5.097055 , 0 , -1.4970553
+2025-11-20 14:59:13.6439 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.897055 , 0 , -1.4970553
+2025-11-20 14:59:13.7511 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.6970553 , 0 , -1.4970553
+2025-11-20 14:59:13.8457 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.4970555 , 0 , -1.4970553
+2025-11-20 14:59:13.9384 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.2970557 , 0 , -1.4970553
+2025-11-20 14:59:14.0474 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.097056 , 0 , -1.4970553
+2025-11-20 14:59:14.1405 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.8970559 , 0 , -1.4970553
+2025-11-20 14:59:14.2495 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.6970558 , 0 , -1.4970553
+2025-11-20 14:59:14.3561 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.6970558 , 0 , -1.4970553
+2025-11-20 14:59:15.2559 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.6970558 , 0 , -1.2970552
+2025-11-20 14:59:15.3497 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.6970558 , 0 , -1.0970552
+2025-11-20 14:59:15.4435 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.6970558 , 0 , -1.0970552
+2025-11-20 14:59:16.0477 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.4970558 , 0 , -1.0970552
+2025-11-20 14:59:16.1568 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.4970558 , 0 , -1.0970552
+2025-11-20 14:59:16.3436 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.2970557 , 0 , -1.0970552
+2025-11-20 14:59:16.4355 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.0970557 , 0 , -1.0970552
+2025-11-20 14:59:16.5428 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -2.9556344 , 0 , -0.9556339
+2025-11-20 14:59:16.6507 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -2.9556344 , 0 , -0.9556339
+2025-11-20 14:59:17.3490 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.0970557 , 0 , -1.0970552
+2025-11-20 14:59:17.4582 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.0970557 , 0 , -1.0970552
+2025-11-20 14:59:19.0412 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.238477 , 0 , -1.2384765
+2025-11-20 14:59:19.1505 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.238477 , 0 , -1.2384765
+2025-11-20 14:59:19.9467 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.438477 , 0 , -1.2384765
+2025-11-20 14:59:20.0397 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.438477 , 0 , -1.2384765
+2025-11-20 14:59:20.7537 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.238477 , 0 , -1.2384765
+2025-11-20 14:59:20.8458 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.238477 , 0 , -1.2384765
+2025-11-20 14:59:21.1572 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.238477 , 0 , -1.4384766
+2025-11-20 14:59:21.2342 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.238477 , 0 , -1.6384766
+2025-11-20 14:59:21.3447 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.3798983 , 0 , -1.7798979
+2025-11-20 14:59:21.4385 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.5213196 , 0 , -1.9213192
+2025-11-20 14:59:21.5478 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.7213197 , 0 , -1.9213192
+2025-11-20 14:59:21.6572 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.7213197 , 0 , -1.9213192
+2025-11-20 14:59:22.0459 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.862741 , 0 , -1.7798979
+2025-11-20 14:59:22.1538 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.862741 , 0 , -1.5798979
+2025-11-20 14:59:22.2464 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.862741 , 0 , -1.5798979
+2025-11-20 14:59:23.4544 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.7213197 , 0 , -1.4384766
+2025-11-20 14:59:23.5472 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.7213197 , 0 , -1.4384766
+2025-11-20 14:59:27.3529 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.7213197 , 0 , -1.6384766
+2025-11-20 14:59:27.4456 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.7213197 , 0 , -1.8384767
+2025-11-20 14:59:27.5379 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.9213197 , 0 , -1.8384767
+2025-11-20 14:59:27.6468 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.9213197 , 0 , -1.8384767
+2025-11-20 14:59:27.7400 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.12132 , 0 , -1.8384767
+2025-11-20 14:59:27.8491 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.3213196 , 0 , -1.8384767
+2025-11-20 14:59:27.9439 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.12132 , 0 , -1.8384767
+2025-11-20 14:59:28.0388 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.9213197 , 0 , -1.8384767
+2025-11-20 14:59:28.1460 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.7798984 , 0 , -1.979898
+2025-11-20 14:59:28.2398 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.7798984 , 0 , -2.179898
+2025-11-20 14:59:28.3499 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.9213197 , 0 , -2.3213193
+2025-11-20 14:59:28.4431 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.12132 , 0 , -2.3213193
+2025-11-20 14:59:28.5514 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.12132 , 0 , -2.3213193
+2025-11-20 14:59:28.9414 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.12132 , 0 , -2.5213194
+2025-11-20 14:59:29.0497 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.9213197 , 0 , -2.5213194
+2025-11-20 14:59:29.1424 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -3.9213197 , 0 , -2.5213194
+2025-11-20 14:59:29.5440 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.12132 , 0 , -2.5213194
+2025-11-20 14:59:29.6372 (StateSyncRequestHandler.cs:17) 玩家ID:479873363349864448 移动到新位置: -4.12132 , 0 , -2.5213194

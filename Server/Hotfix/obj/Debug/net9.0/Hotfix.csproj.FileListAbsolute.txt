@@ -1,0 +1,17 @@
+D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\bin\Debug\net9.0\Fantasy.config
+D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\bin\Debug\net9.0\Fantasy.xsd
+D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\bin\Debug\net9.0\Hotfix.deps.json
+D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\bin\Debug\net9.0\Hotfix.dll
+D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\bin\Debug\net9.0\Hotfix.pdb
+D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\bin\Debug\net9.0\Entity.dll
+D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\bin\Debug\net9.0\Entity.pdb
+D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\obj\Debug\net9.0\Hotfix.csproj.AssemblyReference.cache
+D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\obj\Debug\net9.0\Hotfix.GeneratedMSBuildEditorConfig.editorconfig
+D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\obj\Debug\net9.0\Hotfix.AssemblyInfoInputs.cache
+D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\obj\Debug\net9.0\Hotfix.AssemblyInfo.cs
+D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\obj\Debug\net9.0\Hotfix.csproj.CoreCompileInputs.cache
+D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\obj\Debug\net9.0\Hotfix.csproj.Up2Date
+D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\obj\Debug\net9.0\Hotfix.dll
+D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\obj\Debug\net9.0\refint\Hotfix.dll
+D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\obj\Debug\net9.0\Hotfix.pdb
+D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\obj\Debug\net9.0\ref\Hotfix.dll

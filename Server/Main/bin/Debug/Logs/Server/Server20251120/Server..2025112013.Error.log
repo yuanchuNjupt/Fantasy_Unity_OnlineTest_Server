@@ -1,0 +1,32 @@
+2025-11-20 13:10:24.1893  System.NullReferenceException: Object reference not set to an instance of an object.
+   at Hotfix.System.LobbyPlayerManagerComponentSystem.PlayerMove(LobbyPlayerManagerComponent self, Int64 playerId, stateSyncData syncData) in D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\System\LobbyPlayerManagerComponentSystem.cs:line 61
+   at Hotfix.Lobby.StateSyncRequestHandler.Run(Session session, StateSyncRequest request, StateSyncResponse response, Action reply) in D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\Lobby\StateSyncRequestHandler.cs:line 17
+   at Fantasy.Network.Interface.MessageRPC`2.Handle(Session session, UInt32 rpcId, UInt32 messageTypeCode, Object message)
+2025-11-20 13:10:24.2652  System.NullReferenceException: Object reference not set to an instance of an object.
+   at Hotfix.System.LobbyPlayerManagerComponentSystem.PlayerMove(LobbyPlayerManagerComponent self, Int64 playerId, stateSyncData syncData) in D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\System\LobbyPlayerManagerComponentSystem.cs:line 61
+   at Hotfix.Lobby.StateSyncRequestHandler.Run(Session session, StateSyncRequest request, StateSyncResponse response, Action reply) in D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\Lobby\StateSyncRequestHandler.cs:line 17
+   at Fantasy.Network.Interface.MessageRPC`2.Handle(Session session, UInt32 rpcId, UInt32 messageTypeCode, Object message)
+2025-11-20 13:10:24.3794  System.NullReferenceException: Object reference not set to an instance of an object.
+   at Hotfix.System.LobbyPlayerManagerComponentSystem.PlayerMove(LobbyPlayerManagerComponent self, Int64 playerId, stateSyncData syncData) in D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\System\LobbyPlayerManagerComponentSystem.cs:line 61
+   at Hotfix.Lobby.StateSyncRequestHandler.Run(Session session, StateSyncRequest request, StateSyncResponse response, Action reply) in D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\Lobby\StateSyncRequestHandler.cs:line 17
+   at Fantasy.Network.Interface.MessageRPC`2.Handle(Session session, UInt32 rpcId, UInt32 messageTypeCode, Object message)
+2025-11-20 13:10:24.4662  System.NullReferenceException: Object reference not set to an instance of an object.
+   at Hotfix.System.LobbyPlayerManagerComponentSystem.PlayerMove(LobbyPlayerManagerComponent self, Int64 playerId, stateSyncData syncData) in D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\System\LobbyPlayerManagerComponentSystem.cs:line 61
+   at Hotfix.Lobby.StateSyncRequestHandler.Run(Session session, StateSyncRequest request, StateSyncResponse response, Action reply) in D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\Lobby\StateSyncRequestHandler.cs:line 17
+   at Fantasy.Network.Interface.MessageRPC`2.Handle(Session session, UInt32 rpcId, UInt32 messageTypeCode, Object message)
+2025-11-20 13:10:31.8747  System.NullReferenceException: Object reference not set to an instance of an object.
+   at Hotfix.System.LobbyPlayerManagerComponentSystem.PlayerMove(LobbyPlayerManagerComponent self, Int64 playerId, stateSyncData syncData) in D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\System\LobbyPlayerManagerComponentSystem.cs:line 61
+   at Hotfix.Lobby.StateSyncRequestHandler.Run(Session session, StateSyncRequest request, StateSyncResponse response, Action reply) in D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\Lobby\StateSyncRequestHandler.cs:line 17
+   at Fantasy.Network.Interface.MessageRPC`2.Handle(Session session, UInt32 rpcId, UInt32 messageTypeCode, Object message)
+2025-11-20 13:10:31.9692  System.NullReferenceException: Object reference not set to an instance of an object.
+   at Hotfix.System.LobbyPlayerManagerComponentSystem.PlayerMove(LobbyPlayerManagerComponent self, Int64 playerId, stateSyncData syncData) in D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\System\LobbyPlayerManagerComponentSystem.cs:line 61
+   at Hotfix.Lobby.StateSyncRequestHandler.Run(Session session, StateSyncRequest request, StateSyncResponse response, Action reply) in D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\Lobby\StateSyncRequestHandler.cs:line 17
+   at Fantasy.Network.Interface.MessageRPC`2.Handle(Session session, UInt32 rpcId, UInt32 messageTypeCode, Object message)
+2025-11-20 13:10:32.0667  System.NullReferenceException: Object reference not set to an instance of an object.
+   at Hotfix.System.LobbyPlayerManagerComponentSystem.PlayerMove(LobbyPlayerManagerComponent self, Int64 playerId, stateSyncData syncData) in D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\System\LobbyPlayerManagerComponentSystem.cs:line 61
+   at Hotfix.Lobby.StateSyncRequestHandler.Run(Session session, StateSyncRequest request, StateSyncResponse response, Action reply) in D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\Lobby\StateSyncRequestHandler.cs:line 17
+   at Fantasy.Network.Interface.MessageRPC`2.Handle(Session session, UInt32 rpcId, UInt32 messageTypeCode, Object message)
+2025-11-20 13:10:32.1670  System.NullReferenceException: Object reference not set to an instance of an object.
+   at Hotfix.System.LobbyPlayerManagerComponentSystem.PlayerMove(LobbyPlayerManagerComponent self, Int64 playerId, stateSyncData syncData) in D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\System\LobbyPlayerManagerComponentSystem.cs:line 61
+   at Hotfix.Lobby.StateSyncRequestHandler.Run(Session session, StateSyncRequest request, StateSyncResponse response, Action reply) in D:\unity_resourse\Servers\OnlineTest\Server\Hotfix\Lobby\StateSyncRequestHandler.cs:line 17
+   at Fantasy.Network.Interface.MessageRPC`2.Handle(Session session, UInt32 rpcId, UInt32 messageTypeCode, Object message)

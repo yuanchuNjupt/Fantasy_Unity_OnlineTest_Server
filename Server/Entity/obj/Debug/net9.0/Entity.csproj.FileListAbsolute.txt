@@ -1,0 +1,14 @@
+D:\unity_resourse\Servers\OnlineTest\Server\Entity\bin\Debug\net9.0\Fantasy.config
+D:\unity_resourse\Servers\OnlineTest\Server\Entity\bin\Debug\net9.0\Fantasy.xsd
+D:\unity_resourse\Servers\OnlineTest\Server\Entity\bin\Debug\net9.0\Entity.deps.json
+D:\unity_resourse\Servers\OnlineTest\Server\Entity\bin\Debug\net9.0\Entity.dll
+D:\unity_resourse\Servers\OnlineTest\Server\Entity\bin\Debug\net9.0\Entity.pdb
+D:\unity_resourse\Servers\OnlineTest\Server\Entity\obj\Debug\net9.0\Entity.csproj.AssemblyReference.cache
+D:\unity_resourse\Servers\OnlineTest\Server\Entity\obj\Debug\net9.0\Entity.GeneratedMSBuildEditorConfig.editorconfig
+D:\unity_resourse\Servers\OnlineTest\Server\Entity\obj\Debug\net9.0\Entity.AssemblyInfoInputs.cache
+D:\unity_resourse\Servers\OnlineTest\Server\Entity\obj\Debug\net9.0\Entity.AssemblyInfo.cs
+D:\unity_resourse\Servers\OnlineTest\Server\Entity\obj\Debug\net9.0\Entity.csproj.CoreCompileInputs.cache
+D:\unity_resourse\Servers\OnlineTest\Server\Entity\obj\Debug\net9.0\Entity.dll
+D:\unity_resourse\Servers\OnlineTest\Server\Entity\obj\Debug\net9.0\refint\Entity.dll
+D:\unity_resourse\Servers\OnlineTest\Server\Entity\obj\Debug\net9.0\Entity.pdb
+D:\unity_resourse\Servers\OnlineTest\Server\Entity\obj\Debug\net9.0\ref\Entity.dll

@@ -1,0 +1,10 @@
+2025-11-19 21:48:35.8941 (LoginRequestHandler.cs:17) 收到登录请求
+2025-11-19 21:48:35.9022 (LoginRequestHandler.cs:38) 当前没有其他玩家在线，无需广播
+2025-11-19 21:48:47.3185 (LoginRequestHandler.cs:17) 收到登录请求
+2025-11-19 21:48:47.3185 (LoginRequestHandler.cs:51) 向ID:478811802053115904发送其他玩家登录请求
+2025-11-19 21:52:20.2249 (LoginRequestHandler.cs:17) 收到登录请求
+2025-11-19 21:52:20.2249 (LoginRequestHandler.cs:38) 当前没有其他玩家在线，无需广播
+2025-11-19 21:52:29.5543 (LoginRequestHandler.cs:17) 收到登录请求
+2025-11-19 21:52:29.5543 (LoginRequestHandler.cs:51) 向ID:478815667523682304发送其他玩家登录请求
+2025-11-19 21:52:35.7385 (LogoutRequestHandler.cs:74) 向玩家ID:478815667523682304 发送玩家ID:478815822142504960下线消息
+2025-11-19 21:52:35.7385 (LogoutRequestHandler.cs:77) 玩家ID:478815822142504960 下线成功
