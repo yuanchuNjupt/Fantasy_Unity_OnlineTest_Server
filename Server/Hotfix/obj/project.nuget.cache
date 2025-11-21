@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+s++k2U4y6k=",
+  "dgSpecHash": "fi5xuwElLms=",
   "success": true,
-  "projectFilePath": "D:\\unity_resourse\\Servers\\OnlineTest\\Server\\Hotfix\\Hotfix.csproj",
+  "projectFilePath": "D:\\GitHub\\Fantasy_Unity_OnlineTest_Server\\Server\\Hotfix\\Hotfix.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yuanchuz\\.nuget\\packages\\commandlineparser\\2.9.1\\commandlineparser.2.9.1.nupkg.sha512",
     "C:\\Users\\yuanchuz\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",

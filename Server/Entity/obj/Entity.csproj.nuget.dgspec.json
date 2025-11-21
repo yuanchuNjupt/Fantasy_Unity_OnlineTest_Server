@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\unity_resourse\\Servers\\OnlineTest\\Server\\Entity\\Entity.csproj": {}
+    "D:\\GitHub\\Fantasy_Unity_OnlineTest_Server\\Server\\Entity\\Entity.csproj": {}
   },
   "projects": {
-    "D:\\unity_resourse\\Servers\\OnlineTest\\Server\\Entity\\Entity.csproj": {
+    "D:\\GitHub\\Fantasy_Unity_OnlineTest_Server\\Server\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\unity_resourse\\Servers\\OnlineTest\\Server\\Entity\\Entity.csproj",
+        "projectUniqueName": "D:\\GitHub\\Fantasy_Unity_OnlineTest_Server\\Server\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "D:\\unity_resourse\\Servers\\OnlineTest\\Server\\Entity\\Entity.csproj",
+        "projectPath": "D:\\GitHub\\Fantasy_Unity_OnlineTest_Server\\Server\\Entity\\Entity.csproj",
         "packagesPath": "C:\\Users\\yuanchuz\\.nuget\\packages\\",
-        "outputPath": "D:\\unity_resourse\\Servers\\OnlineTest\\Server\\Entity\\obj\\",
+        "outputPath": "D:\\GitHub\\Fantasy_Unity_OnlineTest_Server\\Server\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

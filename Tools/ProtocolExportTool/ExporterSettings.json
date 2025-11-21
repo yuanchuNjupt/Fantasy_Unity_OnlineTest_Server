@@ -9,7 +9,7 @@
             "Comment": "ProtoBuf生成到服务端的文件夹位置"
         },
         "NetworkProtocolClientDirectory": {
-            "Value": "D:\\unity_project\\联机测试\\Assets\\Scripts/Generate/NetworkProtocol/",
+            "Value": "../../../Fantasy_Unity_OnlineTest_Client/Assets/Scripts/Generate/NetworkProtocol/",
             "Comment": "ProtoBuf生成到客户端的文件夹位置"
         },
         "Serializes": {
