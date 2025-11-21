@@ -16,5 +16,8 @@ public class Account : Entity , ISupportedDataBase
     
     //注册时间
     public long createTime;
+    
+    //玩家暂时和角色绑定
+    public Role role;
 
 }

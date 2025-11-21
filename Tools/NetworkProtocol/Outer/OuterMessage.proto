@@ -31,7 +31,7 @@ message LoginRequest // IRequest , LoginResponse
 }
 message LoginResponse // IResponse
 {
-  int64 playerId = 1;
+  PlayerData selfData = 1;
   repeated PlayerData otherPlayerData = 2;
 }
 //其他玩家登录广播

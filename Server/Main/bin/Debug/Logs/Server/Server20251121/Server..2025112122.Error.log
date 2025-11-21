@@ -1,0 +1,8 @@
+2025-11-21 22:33:29.3839  System.NullReferenceException: Object reference not set to an instance of an object.
+   at Hotfix.System.AuthenticationAccountComponentSystem.RegisterAccount(AuthenticationAccountComponent self, String account, String password) in D:\GitHub\Fantasy_Unity_OnlineTest_Server\Server\Hotfix\System\AuthenticationAccountComponentSystem.cs:line 23
+   at Hotfix.Authentication.RegisterAccountRequestHandler.Run(Session session, RegisterAccountRequest request, RegisterAccountResponse response, Action reply) in D:\GitHub\Fantasy_Unity_OnlineTest_Server\Server\Hotfix\Authentication\RegisterAccountRequestHandler.cs:line 25
+   at Fantasy.Network.Interface.MessageRPC`2.Handle(Session session, UInt32 rpcId, UInt32 messageTypeCode, Object message)
+2025-11-21 22:38:24.6493  System.NullReferenceException: Object reference not set to an instance of an object.
+   at Hotfix.Helper.Vector3Helper.ToCSVector3(Vector3 v) in D:\GitHub\Fantasy_Unity_OnlineTest_Server\Server\Hotfix\Helper\Vector3Helper.cs:line 10
+   at Hotfix.Lobby.LoginRequestHandler.Run(Session session, LoginRequest request, LoginResponse response, Action reply) in D:\GitHub\Fantasy_Unity_OnlineTest_Server\Server\Hotfix\Lobby\LoginRequestHandler.cs:line 65
+   at Fantasy.Network.Interface.MessageRPC`2.Handle(Session session, UInt32 rpcId, UInt32 messageTypeCode, Object message)

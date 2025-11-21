@@ -1,5 +1,6 @@
 ﻿using Fantasy;
 using Fantasy.Async;
+using Fantasy.Authentication;
 using Fantasy.Event;
 using Fantasy.Lobby;
 
@@ -13,6 +14,7 @@ public class OnSceneCreateConfig : AsyncEventSystem<OnCreateScene>
         {
             case SceneType.Gate:
                 self.Scene.AddComponent<LobbyPlayerManagerComponent>();
+                self.Scene.AddComponent<AuthenticationAccountComponent>();
                 break;
         }
 

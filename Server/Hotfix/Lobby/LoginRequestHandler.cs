@@ -1,5 +1,6 @@
 ﻿using Fantasy;
 using Fantasy.Async;
+using Fantasy.Authentication;
 using Fantasy.Entitas;
 using Fantasy.Lobby;
 using Fantasy.Network;
@@ -16,11 +17,32 @@ public class LoginRequestHandler : MessageRPC<LoginRequest , LoginResponse>
         //客户端发送登录请求
         //缓存数据
         Log.Info("收到登录请求");
+        
+        //TODO:验证账号合法性
+        var authenticationComponent = session.Scene.GetComponent<AuthenticationAccountComponent>();
+        var res = await authenticationComponent.LoginAccount(request.account, request.pass);
+        response.ErrorCode = res.errorCode;
+        
+        
+        if (response.ErrorCode != 0)
+        {
+            Log.Debug("账号验证失败，错误码:" + response.ErrorCode);
+            return;
+        }
+        
         var lobbyPlayerManager = session.Scene.GetComponent<LobbyPlayerManagerComponent>();
         //缓存玩家数据并保持会话
-        var res = lobbyPlayerManager.AddPlayer(session);
-        Log.Info("登陆成功，分配玩家ID:" + res.id);
-        var otherPlayers = lobbyPlayerManager.GetLobbyPlayers(res.id).ToList();
+        response.ErrorCode = await lobbyPlayerManager.AddPlayer(session , res.accountData.Id);
+
+        if (response.ErrorCode != 0)
+        {
+            Log.Debug("添加玩家到大厅失败，错误码:" + response.ErrorCode);
+            return;
+        }
+        
+        
+        Log.Info("登陆成功，分配玩家ID:" + res.accountData.Id);
+        var otherPlayers = lobbyPlayerManager.GetLobbyPlayers(res.accountData.Id).ToList();
         
         List<PlayerData> otherPlayersData = new List<PlayerData>();
         
@@ -40,7 +62,12 @@ public class LoginRequestHandler : MessageRPC<LoginRequest , LoginResponse>
         
 
         response.ErrorCode = 0;
-        response.playerId = res.id;
+        response.selfData = new PlayerData()
+        {
+            playerId = res.accountData.Id,
+            position = res.accountData.role.LastPosition.ToCSVector3(),
+            renderDir = res.accountData.role.LastRenderDir.ToCSVector3()
+        };
 
         //向其他玩家广播新玩家加入
         
@@ -56,7 +83,7 @@ public class LoginRequestHandler : MessageRPC<LoginRequest , LoginResponse>
         foreach (var otherPlayer in otherPlayers)
         {
             OtherPlayerLoginMessage message = OtherPlayerLoginMessage.Create(session.Scene);
-            message.playerId = res.id;
+            message.playerId = res.accountData.Id;
             if (otherPlayer.Session.IsDisposed)
             {
                 Log.Debug("连接已断开，无法发送消息，玩家ID:" + otherPlayer.Id);

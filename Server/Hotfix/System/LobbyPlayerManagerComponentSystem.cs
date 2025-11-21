@@ -1,4 +1,7 @@
 ﻿using Fantasy;
+using Fantasy.Async;
+using Fantasy.Authentication;
+using Fantasy.Database;
 using Fantasy.Entitas;
 using Fantasy.Lobby;
 using Fantasy.Network;
@@ -8,29 +11,44 @@ namespace Hotfix.System;
 
 public static class LobbyPlayerManagerComponentSystem
 {
-    public static (long id , uint errorCode) AddPlayer(this LobbyPlayerManagerComponent self , Session session)
+    public static async FTask<uint> AddPlayer(this LobbyPlayerManagerComponent self , Session session , long playerId)
     {
         var player = Entity.Create<LobbyPlayer>(self.Scene , true , true);
-        if (self.LobbyPlayers.ContainsKey(player.Id))
+        if (self.LobbyPlayers.ContainsKey(playerId))
         {
-            Log.Debug("玩家已存在，无法添加，玩家ID:" + player.Id);
-            return (player.Id, ErrorCode.PLAYER_ADD_FAILED);
+            Log.Debug("玩家已存在，无法添加，玩家ID:" + playerId);
+            return ErrorCode.PLAYER_ADD_FAILED;
         }
         
+        player.AccountId = playerId;  // 设置账号ID
         player.Session = session;
-        self.LobbyPlayers.Add(player.Id , player);
-        return (player.Id , ErrorCode.SUCCESS);
+        //向数据库中获取玩家角色数据
+        IDatabase dataBase = self.Scene.World.Database;
+
+        Role role = await dataBase.First<Role>(x => x.AccountId == playerId);
+        if (role == null)
+        {
+            
+            //一般来说不太可能出现这种情况
+            Log.Debug("数据库中不存在该玩家角色数据，玩家ID:" + playerId);
+            return ErrorCode.PLAYER_ADD_FAILED;
+        }
+
+        player.role = role;
+        self.LobbyPlayers.Add(playerId , player);
+        
+        return ErrorCode.SUCCESS;
     }
     
     public static IEnumerable<LobbyPlayer?> GetLobbyPlayers(this LobbyPlayerManagerComponent self , long filterId = 0)
     {
-        return self.LobbyPlayers.Values.Where(x => x.Id != filterId);
+        return self.LobbyPlayers.Values.Where(x => x.AccountId != filterId);  // 使用 AccountId 进行过滤
     }
     
-    public static IEnumerable<long> GetLobbyPlayersId(this LobbyPlayerManagerComponent self , long filterId = 0)
-    {
-        return self.LobbyPlayers.Keys.Where(x => x != filterId);
-    }
+    // public static IEnumerable<long> GetLobbyPlayersId(this LobbyPlayerManagerComponent self , long filterId = 0)
+    // {
+    //     return self.LobbyPlayers.Keys.Where(x => x != filterId);
+    // }
     
     public static uint RemovePlayer(this LobbyPlayerManagerComponent self , long playerId)
     {
@@ -58,9 +76,9 @@ public static class LobbyPlayerManagerComponentSystem
             return (null, ErrorCode.PLAYER_NOT_FOUND);
         }
 
-        player.Position.x += syncData.inputDir.x * self.FixedDeltaTime * player.moveSpeed;
-        player.Position.y += syncData.inputDir.y * self.FixedDeltaTime * player.moveSpeed;
-        player.Position.z += syncData.inputDir.z * self.FixedDeltaTime * player.moveSpeed;
+        player.Position.x += syncData.inputDir.x * self.FixedDeltaTime * player.role.moveSpeed;
+        player.Position.y += syncData.inputDir.y * self.FixedDeltaTime * player.role.moveSpeed;
+        player.Position.z += syncData.inputDir.z * self.FixedDeltaTime * player.role.moveSpeed;
 
         if (syncData.inputDir.x != 0 || syncData.inputDir.y != 0 || syncData.inputDir.z != 0)
         {
