@@ -35,7 +35,7 @@ public class LogoutRequestHandler : Message<LogoutMessage>
             // 检查 Session 是否有效
             if (otherPlayer.Session == null || otherPlayer.Session.IsDisposed)
             {
-                Log.Debug($"玩家ID:{otherPlayer.Id} 的Session已断开，跳过发送下线消息");
+                Log.Debug($"玩家ID:{otherPlayer.AccountId} 的Session已断开，跳过发送下线消息");
                 continue;
             }
             
@@ -43,7 +43,7 @@ public class LogoutRequestHandler : Message<LogoutMessage>
             OtherPlayerLogoutMessage logoutMsg = OtherPlayerLogoutMessage.Create(session.Scene);
             logoutMsg.playerId = message.playerId;
             otherPlayer.Session.Send(logoutMsg);
-            Log.Debug($"向玩家ID:{otherPlayer.Id} 发送玩家ID:{message.playerId}下线消息");
+            Log.Debug($"向玩家ID:{otherPlayer.AccountId} 发送玩家ID:{message.playerId}下线消息");
         }
         
         

@@ -18,7 +18,6 @@ public class LoginRequestHandler : MessageRPC<LoginRequest , LoginResponse>
         //缓存数据
         Log.Info("收到登录请求");
         
-        //TODO:验证账号合法性
         var authenticationComponent = session.Scene.GetComponent<AuthenticationAccountComponent>();
         var res = await authenticationComponent.LoginAccount(request.account, request.pass);
         response.ErrorCode = res.errorCode;
@@ -50,11 +49,11 @@ public class LoginRequestHandler : MessageRPC<LoginRequest , LoginResponse>
         {
             //注意引用类型问题
             PlayerData playerData = new PlayerData();
-            playerData.playerId = otherPlayers[i].Id;
+            playerData.playerId = otherPlayers[i].AccountId;
             playerData.position = otherPlayers[i].Position.ToCSVector3();
             playerData.renderDir = otherPlayers[i].RenderDir.ToCSVector3();
             otherPlayersData.Add(playerData);
-            Log.Info("获取其他玩家数据，玩家ID:" + otherPlayers[i].Id);
+            Log.Info("获取其他玩家数据，玩家ID:" + otherPlayers[i].AccountId);
         }
 
         response.otherPlayerData = otherPlayersData;
@@ -62,6 +61,8 @@ public class LoginRequestHandler : MessageRPC<LoginRequest , LoginResponse>
         
 
         response.ErrorCode = 0;
+        
+        //获取自身玩家数据
         response.selfData = new PlayerData()
         {
             playerId = res.accountData.Id,

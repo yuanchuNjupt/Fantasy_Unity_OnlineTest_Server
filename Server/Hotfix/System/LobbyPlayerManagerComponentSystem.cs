@@ -67,12 +67,12 @@ public static class LobbyPlayerManagerComponentSystem
     }
 
     public static (stateSyncData? syncData, uint errorCode) PlayerMove(this LobbyPlayerManagerComponent self,
-        long playerId, stateSyncData syncData)
+        stateSyncData syncData)
     {
         //获取这个玩家
-        if (!self.LobbyPlayers.TryGetValue(playerId, out var player))
+        if (!self.LobbyPlayers.TryGetValue(syncData.playerId, out var player))
         {
-            Log.Debug("不存在玩家ID : " + playerId);
+            Log.Debug("不存在玩家ID : " + syncData.playerId);
             return (null, ErrorCode.PLAYER_NOT_FOUND);
         }
 
@@ -83,12 +83,12 @@ public static class LobbyPlayerManagerComponentSystem
         if (syncData.inputDir.x != 0 || syncData.inputDir.y != 0 || syncData.inputDir.z != 0)
         {
             player.RenderDir = syncData.inputDir.ToVector3();
-            Log.Info("玩家ID:" + playerId + " 移动方向: " + syncData.inputDir.x + " , " + syncData.inputDir.y + " , " + syncData.inputDir.z);
+            Log.Info("玩家ID:" + syncData.playerId + " 移动方向: " + syncData.inputDir.x + " , " + syncData.inputDir.y + " , " + syncData.inputDir.z);
         }
         
         //更新状态数据
         syncData.position = player.Position.ToCSVector3();
-        Log.Info("玩家ID:" + playerId + " 移动到新位置: " + syncData.position.x + " , " + syncData.position.y + " , " + syncData.position.z);
+        Log.Info("玩家ID:" + syncData.playerId + " 移动到新位置: " + syncData.position.x + " , " + syncData.position.y + " , " + syncData.position.z);
         
         return (syncData, ErrorCode.SUCCESS);
     }

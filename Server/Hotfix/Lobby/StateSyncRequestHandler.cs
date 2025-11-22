@@ -14,7 +14,8 @@ public class StateSyncRequestHandler : MessageRPC<StateSyncRequest, StateSyncRes
     {
         var lobbyPlayerManager = session.Scene.GetComponent<LobbyPlayerManagerComponent>();
 
-        var res = lobbyPlayerManager.PlayerMove(request.stateData.playerId, request.stateData);
+        //hyw?
+        var res = lobbyPlayerManager.PlayerMove(request.stateData);
 
         response.ErrorCode = res.errorCode;
         if (response.ErrorCode != 0)
