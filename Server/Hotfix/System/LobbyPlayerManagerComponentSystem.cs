@@ -1,7 +1,6 @@
 ﻿using Fantasy;
 using Fantasy.Async;
 using Fantasy.Authentication;
-using Fantasy.Database;
 using Fantasy.Entitas;
 using Fantasy.Lobby;
 using Fantasy.Network;
@@ -22,21 +21,26 @@ public static class LobbyPlayerManagerComponentSystem
         
         player.AccountId = playerId;  // 设置账号ID
         player.Session = session;
-        //向数据库中获取玩家角色数据
-        IDatabase dataBase = self.Scene.World.Database;
-
-        Role role = await dataBase.First<Role>(x => x.AccountId == playerId);
-        if (role == null)
+        
+        //从AuthenticationAccountComponent缓存中获取Account（包含Role）
+        var authComponent = self.Scene.GetComponent<AuthenticationAccountComponent>();
+        Account? account = authComponent.AccountCache.Values.FirstOrDefault(x => x.Id == playerId);
+        
+        if (account == null || account.role == null)
         {
-            
-            //一般来说不太可能出现这种情况
-            Log.Debug("数据库中不存在该玩家角色数据，玩家ID:" + playerId);
+            Log.Debug("缓存中不存在该账号或角色数据，玩家ID:" + playerId);
             return ErrorCode.PLAYER_ADD_FAILED;
         }
 
-        player.role = role;
+        player.role = account.role;
+        
+        //使用角色的上次下线位置和朝向初始化玩家位置
+        player.Position = account.role.LastPosition;
+        player.RenderDir = account.role.LastRenderDir;
+        
         self.LobbyPlayers.Add(playerId , player);
         
+        await FTask.CompletedTask;
         return ErrorCode.SUCCESS;
     }
     
@@ -45,24 +49,31 @@ public static class LobbyPlayerManagerComponentSystem
         return self.LobbyPlayers.Values.Where(x => x.AccountId != filterId);  // 使用 AccountId 进行过滤
     }
     
-    // public static IEnumerable<long> GetLobbyPlayersId(this LobbyPlayerManagerComponent self , long filterId = 0)
-    // {
-    //     return self.LobbyPlayers.Keys.Where(x => x != filterId);
-    // }
-    
-    public static uint RemovePlayer(this LobbyPlayerManagerComponent self , long playerId)
+    public static (uint errorCode , Account? account) RemovePlayer(this LobbyPlayerManagerComponent self , long playerId)
     {
         if (self.LobbyPlayers.ContainsKey(playerId))
         {
             var player = self.LobbyPlayers[playerId];
-            player.Dispose();
+            
+            //从AuthenticationAccountComponent缓存中获取Account
+            var authComponent = self.Scene.GetComponent<AuthenticationAccountComponent>();
+            Account? account = authComponent.AccountCache.Values.FirstOrDefault(x => x.Id == playerId);
+            
+            if (account != null && account.role != null)
+            {
+                //更新Role的位置和朝向数据
+                account.role.LastPosition = player.Position;
+                account.role.LastRenderDir = player.RenderDir;
+            }
+            
+            player.Dispose();  // 释放player
             self.LobbyPlayers.Remove(playerId);
-            return ErrorCode.SUCCESS;
+            return (ErrorCode.SUCCESS , account);
         }
         else
         {
             Log.Debug("不存在玩家ID : " + playerId);
-            return ErrorCode.PLAYER_REMOVE_FAILED;
+            return (ErrorCode.PLAYER_REMOVE_FAILED , null);
         }
     }
 

@@ -12,7 +12,7 @@ public class LogoutRequestHandler : Message<LogoutMessage>
     protected override async FTask Run(Session session, LogoutMessage message)
     {
         var lobbyPlayerManager = session.Scene.GetComponent<LobbyPlayerManagerComponent>();
-        uint errorCode = lobbyPlayerManager.RemovePlayer(message.playerId);
+        var (errorCode, account) = lobbyPlayerManager.RemovePlayer(message.playerId);
     
         if (errorCode != 0)
         {
@@ -26,6 +26,14 @@ public class LogoutRequestHandler : Message<LogoutMessage>
         if (otherPlayers.Count() == 0)
         {
             Log.Debug("当前服务器上没有其他玩家在线，无需广播下线消息");
+            
+            //保存Account数据到数据库（包含Role数据）
+            if (account != null)
+            {
+                await session.Scene.World.Database.Save(account);
+                Log.Debug($"玩家ID:{message.playerId} 账号数据已保存到数据库");
+            }
+            
             Log.Debug($"玩家ID:{message.playerId} 下线成功");
             return;
         }
@@ -46,15 +54,12 @@ public class LogoutRequestHandler : Message<LogoutMessage>
             Log.Debug($"向玩家ID:{otherPlayer.AccountId} 发送玩家ID:{message.playerId}下线消息");
         }
         
-        
-        
-        //TODO:处理玩家下线逻辑 比如保存数据等
-        
-        
-        
-        
-        
-        
+        //保存Account数据到数据库（包含Role数据）
+        if (account != null)
+        {
+            await session.Scene.World.Database.Save(account);
+            Log.Debug($"玩家ID:{message.playerId} 账号数据已保存到数据库");
+        }
         
         Log.Debug($"玩家ID:{message.playerId} 下线成功");
     

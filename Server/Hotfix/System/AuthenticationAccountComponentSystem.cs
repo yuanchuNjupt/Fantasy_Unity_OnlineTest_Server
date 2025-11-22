@@ -43,6 +43,8 @@ public static class AuthenticationAccountComponentSystem
         newAccount.account = account;
         newAccount.createTime = TimeHelper.Now;
         newAccount.password = password;
+        
+        //创建角色，作为Account的一部分
         Role role = Entity.Create<Role>(self.Scene , true , true);
         role.AccountId = newAccount.Id;
         role.moveSpeed = 10f;
@@ -50,15 +52,10 @@ public static class AuthenticationAccountComponentSystem
         role.LastRenderDir = new Vector3(0, 0, 1);
         newAccount.role = role;
         
-        
-        
-        
-        
-        //缓存
+        //缓存Account（包含Role）
         self.AccountCache.Add(account.GetHashCode() , newAccount);
-        //注意也要缓存角色
-        await dataBase.Save(role);
         
+        //只保存Account到数据库，Role作为Account的一部分会自动保存
         await dataBase.Save(newAccount);
 
         return ErrorCode.SUCCESS;

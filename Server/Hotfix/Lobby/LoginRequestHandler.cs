@@ -39,6 +39,10 @@ public class LoginRequestHandler : MessageRPC<LoginRequest , LoginResponse>
             return;
         }
         
+        //监听会话
+        var sessionDispose = session.AddComponent<SessionDisposeComponent>();
+        sessionDispose.AccountId = res.accountData.Id;
+        
         
         Log.Info("登陆成功，分配玩家ID:" + res.accountData.Id);
         var otherPlayers = lobbyPlayerManager.GetLobbyPlayers(res.accountData.Id).ToList();
@@ -63,6 +67,8 @@ public class LoginRequestHandler : MessageRPC<LoginRequest , LoginResponse>
         response.ErrorCode = 0;
         
         //获取自身玩家数据
+        
+        Log.Debug("玩家上次上线位置：" + res.accountData.role.LastPosition);
         response.selfData = new PlayerData()
         {
             playerId = res.accountData.Id,
