@@ -1,0 +1,51 @@
+2025-11-26 22:26:19.0305  
+
+==========================================================================
+ 
+  ███████╗ █████╗ ███╗   ██╗████████╗ █████╗  ██████╗ ██╗   ██╗
+  ██╔════╝██╔══██╗████╗  ██║╚══██╔══╝██╔══██╗██╔════╝ ╚██╗ ██╔╝
+  █████╗  ███████║██╔██╗ ██║   ██║   ███████║╚█████╗   ╚████╔╝ 
+  ██╔══╝  ██╔══██║██║╚██╗██║   ██║   ██╔══██║╚════██║   ╚██╔╝  
+  ██║     ██║  ██║██║ ╚████║   ██║   ██║  ██║██████╔╝    ██║   
+  ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═════╝     ╚═╝   
+                                                            
+ Version : Fantasy 2.0 Official version
+==========================================================================
+
+2025-11-26 22:26:19.0769  Current inner network protocol:TCP
+2025-11-26 22:26:19.0769  Max Message Size(byte):1048560
+2025-11-26 22:26:19.0769  Current session idle timeout:8000
+2025-11-26 22:26:19.0769  Session-check interval:5000 
+2025-11-26 22:26:19.4874  dbName:OnlineTest Initialize the db database and connect to the target.
+2025-11-26 22:26:19.7858  dbName:OnlineTest Database connection successful.
+2025-11-26 22:26:20.1212  SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-11-26 22:26:20.4143  SceneConfigId = 1001 networkTarget = Outer KCPServer Listen 0.0.0.0:20000
+2025-11-26 22:26:20.4143  Process:1 Startup Complete SceneCount:1
+2025-11-26 22:27:57.6207  
+
+==========================================================================
+ 
+  ███████╗ █████╗ ███╗   ██╗████████╗ █████╗  ██████╗ ██╗   ██╗
+  ██╔════╝██╔══██╗████╗  ██║╚══██╔══╝██╔══██╗██╔════╝ ╚██╗ ██╔╝
+  █████╗  ███████║██╔██╗ ██║   ██║   ███████║╚█████╗   ╚████╔╝ 
+  ██╔══╝  ██╔══██║██║╚██╗██║   ██║   ██╔══██║╚════██║   ╚██╔╝  
+  ██║     ██║  ██║██║ ╚████║   ██║   ██║  ██║██████╔╝    ██║   
+  ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═════╝     ╚═╝   
+                                                            
+ Version : Fantasy 2.0 Official version
+==========================================================================
+
+2025-11-26 22:27:57.6652  Current inner network protocol:TCP
+2025-11-26 22:27:57.6652  Max Message Size(byte):1048560
+2025-11-26 22:27:57.6652  Current session idle timeout:8000
+2025-11-26 22:27:57.6652  Session-check interval:5000 
+2025-11-26 22:27:58.0141  dbName:OnlineTest Initialize the db database and connect to the target.
+2025-11-26 22:27:58.2719  dbName:OnlineTest Database connection successful.
+2025-11-26 22:27:58.6272  SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-11-26 22:27:58.9141  SceneConfigId = 1001 networkTarget = Outer KCPServer Listen 0.0.0.0:20000
+2025-11-26 22:27:58.9141  Process:1 Startup Complete SceneCount:1
+2025-11-26 22:28:10.3806 (AuthenticationAccountComponentSystem.cs:39) 账号不存在，可以注册:111
+2025-11-26 22:28:14.9485 (LoginRequestHandler.cs:19) 收到登录请求
+2025-11-26 22:28:15.0145 (LoginRequestHandler.cs:47) 登陆成功，分配玩家ID:489242989124911105
+2025-11-26 22:28:25.8678 (LoginRequestHandler.cs:19) 收到登录请求
+2025-11-26 22:28:25.8822 (LoginRequestHandler.cs:47) 登陆成功，分配玩家ID:489242989124911105

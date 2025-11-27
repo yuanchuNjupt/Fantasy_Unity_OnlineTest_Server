@@ -1,0 +1,7 @@
+2025-11-26 22:28:15.0260 (LoginRequestHandler.cs:71) 玩家上次上线位置：x:0, y:0, z:0
+2025-11-26 22:28:15.0260 (LoginRequestHandler.cs:87) 当前没有其他玩家在线，无需广播
+2025-11-26 22:28:25.7141 (SessionDisposeComponentSystem.cs:28) 当前服务器上没有其他玩家在线，无需广播下线消息
+2025-11-26 22:28:25.7264 (SessionDisposeComponentSystem.cs:77) 账号ID:489242989124911105 数据已保存到数据库
+2025-11-26 22:28:25.7264 (SessionDisposeComponentSystem.cs:34) 玩家ID:489242989124911105 下线成功 , 下线位置:x:0, y:0, z:0
+2025-11-26 22:28:25.8822 (LoginRequestHandler.cs:71) 玩家上次上线位置：x:0, y:0, z:0
+2025-11-26 22:28:25.8822 (LoginRequestHandler.cs:87) 当前没有其他玩家在线，无需广播

@@ -15,4 +15,7 @@ public class ErrorCode
     public const uint ACCOUNT_OR_PASSWORD_IS_EMPTY = 2002;
     
     public const uint ACCOUNT_OR_PASSWORD_ERROR = 2003;
+    
+    public const uint NAME_HAS_BE_REGISTER = 2004;
+    
 }

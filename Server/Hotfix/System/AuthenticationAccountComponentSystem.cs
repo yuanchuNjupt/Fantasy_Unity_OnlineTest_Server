@@ -46,7 +46,6 @@ public static class AuthenticationAccountComponentSystem
         
         //创建角色，作为Account的一部分
         Role role = Entity.Create<Role>(self.Scene , true , true);
-        role.AccountId = newAccount.Id;
         role.moveSpeed = 10f;
         role.LastPosition = new Vector3(0, 0, 0);
         role.LastRenderDir = new Vector3(0, 0, 1);
@@ -83,10 +82,42 @@ public static class AuthenticationAccountComponentSystem
 
 
     }
-    
-    
-    //玩家上下线处理也在这里
-    
+
+    public static async FTask<uint> RegisterName(this AuthenticationAccountComponent self, string accountName, string name)
+    {
+        IDatabase dataBase = self.Scene.World.Database;
+        //查询此名称是否重复
+        if (await dataBase.Exist<Account>(x => x.role.accountName == name))
+        {
+            //已经有人注册了这个名字
+            return ErrorCode.NAME_HAS_BE_REGISTER;
+        }
+        
+        
+        //不存在，允许注册
+        
+        if (!self.AccountCache.TryGetValue(accountName.GetHashCode(), out var account))
+        {
+            //从数据库中查询账户
+            account = await dataBase.First<Account>(x => x.account == accountName);
+        }
+
+        if (account == null)
+        {
+            Log.Error("出现严重错误，不存在此账号！");
+            return ErrorCode.PLAYER_NOT_FOUND;
+        }
+        account.role.accountName = name;
+        
+        //存回去
+        await dataBase.Save(account);
+        self.AccountCache[accountName.GetHashCode()] = account;
+        Log.Info("账号名称注册成功 账号：" + accountName + " 名称：" + name);
+        
+        
+        return ErrorCode.SUCCESS;
+    }
+        
     
 
    

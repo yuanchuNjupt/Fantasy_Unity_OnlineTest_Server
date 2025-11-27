@@ -16,7 +16,7 @@ public class LobbyPlayer : Entity
     public Vector3 Position = new Vector3(0,0,0);
     
     //玩家朝向数据
-    public Vector3 RenderDir = new Vector3(0,0,0);
+    public Vector3 RenderDir = new Vector3(0,0,1);
     
     //玩家角色数据
     public Role role;

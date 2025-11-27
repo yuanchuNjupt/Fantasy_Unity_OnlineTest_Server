@@ -21,6 +21,34 @@ message RegisterAccountResponse // IResponse
   string pass = 2;
 }
 
+//注册姓名请求
+message RegisterNameRequest // IRequest , RegisterNameResponse
+{
+  string accountName = 1;
+  string name = 2;
+}
+
+message RegisterNameResponse // IResponse
+{
+  string accountName = 1;
+  string name = 2;
+}
+
+message EntryLobbyRequest // IRequest , EntryLobbyResponse
+{
+  int64 accountId = 1;
+}
+
+message EntryLobbyResponse // IResponse
+{
+  stateSyncData selfData = 1;
+  repeated stateSyncData otherPlayerData = 2;
+}
+
+
+
+
+
 
 
 ///玩家登录请求
@@ -31,13 +59,13 @@ message LoginRequest // IRequest , LoginResponse
 }
 message LoginResponse // IResponse
 {
-  PlayerData selfData = 1;
-  repeated PlayerData otherPlayerData = 2;
+  int64 accountId = 1;
+  string accountName = 2;
 }
 //其他玩家登录广播
 message OtherPlayerLoginMessage // IMessage
 {
-  int64 playerId = 1;
+  stateSyncData playerData = 1;
 }
 
 //玩家主动退出消息
@@ -52,12 +80,12 @@ message OtherPlayerLogoutMessage // IMessage
   int64 playerId = 1;
 }
 
-message PlayerData
-{
-  int64 playerId = 1;
-  CSVector3 position = 2;
-  CSVector3 renderDir = 3;
-}
+//message PlayerData
+//{
+//  int64 playerId = 1;
+//  CSVector3 position = 2;
+//  CSVector3 renderDir = 3;
+//}
 
 
 
@@ -89,6 +117,7 @@ message stateSyncData
   CSVector3 position = 2;
   CSVector3 inputDir = 3;
   int32 playerState = 4;
+  string PlayerName = 5;
 }
 
 //三维向量 , 传输位置使用
