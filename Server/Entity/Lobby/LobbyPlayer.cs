@@ -20,5 +20,8 @@ public class LobbyPlayer : Entity
     
     //玩家角色数据
     public Role role;
+    
+    //当前所在的队伍ID
+    public long TeamId = 0;
 
 }

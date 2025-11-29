@@ -1,0 +1,19 @@
+2025-11-28 15:58:29.9716 (EntryLobbyRequestHandler.cs:65) 玩家上次上线位置：x:0, y:0, z:0
+2025-11-28 15:58:29.9844 (EntryLobbyRequestHandler.cs:83) 当前没有其他玩家在线，无需广播
+2025-11-28 15:58:31.2243 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 15:58:31.2987 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 15:58:31.3914 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 15:58:31.4999 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 15:58:31.6091 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 15:58:31.7002 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 15:58:31.7939 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 15:58:31.9030 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 15:58:32.0109 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 15:58:32.0879 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 15:58:32.2110 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 15:58:32.3041 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 15:58:32.3967 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 15:58:32.5052 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 15:58:54.2759 (SessionDisposeComponentSystem.cs:28) 当前服务器上没有其他玩家在线，无需广播下线消息
+2025-11-28 15:58:54.2885 (SessionDisposeComponentSystem.cs:77) 账号ID:491809781840084993 数据已保存到数据库
+2025-11-28 15:58:54.2885 (SessionDisposeComponentSystem.cs:34) 玩家ID:491809781840084993 下线成功 , 下线位置:x:-1.3116028, y:0, z:-0.3158151

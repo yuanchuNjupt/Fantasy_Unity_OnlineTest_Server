@@ -8,7 +8,7 @@ using Fantasy.Network.Interface;
 using Hotfix.Helper;
 using Hotfix.System;
 
-namespace Hotfix.Lobby;
+namespace Hotfix.LobbyHandler;
 
 public class EntryLobbyRequestHandler : MessageRPC<EntryLobbyRequest,EntryLobbyResponse>
 {

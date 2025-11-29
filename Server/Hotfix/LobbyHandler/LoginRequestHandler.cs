@@ -1,14 +1,11 @@
 ﻿using Fantasy;
 using Fantasy.Async;
 using Fantasy.Authentication;
-using Fantasy.Entitas;
-using Fantasy.Lobby;
 using Fantasy.Network;
 using Fantasy.Network.Interface;
-using Hotfix.Helper;
 using Hotfix.System;
 
-namespace Hotfix.Lobby;
+namespace Hotfix.LobbyHandler;
 
 public class LoginRequestHandler : MessageRPC<LoginRequest , LoginResponse>
 {

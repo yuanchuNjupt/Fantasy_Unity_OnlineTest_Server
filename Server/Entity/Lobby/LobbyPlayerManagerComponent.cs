@@ -9,5 +9,13 @@ public class LobbyPlayerManagerComponent : Entity
     /// </summary>
     public Dictionary<long , LobbyPlayer> LobbyPlayers = new Dictionary<long , LobbyPlayer>();
     
+    /// <summary>
+    /// Lobby当前所有队伍
+    /// </summary>
+    public Dictionary<long , Team> Teams = new Dictionary<long , Team>();
+
+    //从1000开始 
+    public long TeamIdStart = 1000;
+    
     public readonly float FixedDeltaTime = 0.02f;
 }

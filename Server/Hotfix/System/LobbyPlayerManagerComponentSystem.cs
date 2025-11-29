@@ -103,4 +103,183 @@ public static class LobbyPlayerManagerComponentSystem
         
         return (syncData, ErrorCode.SUCCESS);
     }
+
+
+    #region 组队相关
+
+    public static (long teamId , uint errorCode) CreateTeam(this LobbyPlayerManagerComponent self, long playerId)
+    {
+        if (!self.LobbyPlayers.TryGetValue(playerId, out var player))
+        {
+            Log.Error("当前大厅不存在此玩家！");
+            return(-1 , ErrorCode.PLAYER_NOT_FOUND);
+        }
+        
+        //创建队伍
+        Team team = Entity.Create<Team>(self.Scene, true, true);
+        team.TeamOwner = new TeamMemberInfo()
+        {
+            memberAccountId = player.AccountId,
+            memberName = player.role.accountName,
+        };
+        team.TeamId = self.TeamIdStart++;
+        self.Teams.Add(team.TeamId , team);
+        
+        //设置玩家当前队伍ID
+        player.TeamId = team.TeamId;
+        return (team.TeamId, ErrorCode.SUCCESS);
+    }
+
+    public static (Team? team, uint errorCode) JoinTeam(this LobbyPlayerManagerComponent self, long playerId,
+        long teamId)
+    {
+        
+        //查询成员
+        if (!self.LobbyPlayers.TryGetValue(playerId, out var player))
+        {
+            Log.Error("当前大厅不存在此玩家，玩家ID:" + playerId);
+            return (null, ErrorCode.PLAYER_NOT_FOUND);
+        }
+        
+        
+        //查看队伍是否存在 
+        if (!self.Teams.TryGetValue(teamId, out var team))
+        {
+            Log.Error("当前不存在此队伍，队伍ID:" + teamId);
+            return (null, ErrorCode.TEAM_NOT_FOUND);
+        }
+
+        if (team.TeamMembers.Count >= 3)
+        {
+            Log.Warning("队伍人数已满，无法加入，队伍ID:" + teamId);
+            return (null, ErrorCode.TEAM_MAX);
+        }
+        
+        //设置玩家当前队伍ID
+        player.TeamId = teamId;
+        
+        
+        //在这里向队伍中的其他成员广播新成员加入消息
+        TeamStateChangeMessage message = new TeamStateChangeMessage();
+        message.teamState = 1; //加入
+        message.playerId = playerId;
+
+        player = self.LobbyPlayers[team.TeamOwner.memberAccountId];
+        player.Session.Send(message);
+        
+        team.TeamMembers.ForEach(x =>
+        {
+            player = self.LobbyPlayers[x.memberAccountId];
+            player.Session.Send(message);
+        });
+        
+        
+        //在给当前队伍中的所有人发送完加入消息后 ， 再把新成员添加到队伍中
+        
+        team.TeamMembers.Add(new TeamMemberInfo()
+        {
+            memberAccountId = playerId,
+            memberName = self.LobbyPlayers[playerId].role.accountName,
+        });
+        return (team, ErrorCode.SUCCESS);
+    }
+
+
+    public static void LevelTeam(this LobbyPlayerManagerComponent self, long playerId)
+    {
+        //查看玩家存在的队伍是哪个
+        if (!self.LobbyPlayers.TryGetValue(playerId, out var player))
+        {
+            Log.Error("当前大厅不存在此玩家，玩家ID:" + playerId);
+            return;
+        }
+
+        if (!self.Teams.TryGetValue(player.TeamId, out var team))
+        {
+            Log.Error("当前不存在此队伍，队伍ID:" + player.TeamId);
+            return;
+        }
+        
+        //先把自己从队伍中移除
+        team.TeamMembers.RemoveAll(x => x.memberAccountId == playerId);
+        //在把自己的TeamId清空
+        player.TeamId = 0;
+        
+        
+        //在这里向队伍中的其他成员广播成员离开消息
+        TeamStateChangeMessage message = new TeamStateChangeMessage();
+        message.playerId = playerId;
+        message.teamState = 2;
+
+        //先是队长
+        if (!self.LobbyPlayers.TryGetValue(team.TeamOwner.memberAccountId, out player))
+        {
+            Log.Error("当前大厅不存在此玩家，玩家ID:" + playerId);
+            return;
+        }
+        player.Session.Send(message);
+
+        //然后是队员
+        //看看有没有必要发
+        if (team.TeamMembers.Count == 0)
+        {
+            //没有队员，没必要发
+            Log.Info("队伍ID:" + team.TeamId + " 已经没有成员，不需要发送离开消息");
+            return;
+        }
+        
+        //发消息
+        team.TeamMembers.ForEach(member =>
+        {
+            if (!self.LobbyPlayers.TryGetValue(member.memberAccountId, out player))
+            {
+                Log.Error("当前大厅不存在此玩家，玩家ID:" + playerId);
+                return;
+            }
+            player.Session.Send(message);
+        });
+        
+    }
+
+    public static void RemoveTeam(this LobbyPlayerManagerComponent self, long playerId)
+    {
+        //查看玩家存在的队伍是哪个
+        if (!self.LobbyPlayers.TryGetValue(playerId, out var player))
+        {
+            Log.Error("当前大厅不存在此玩家，玩家ID:" + playerId);
+            return;
+        }
+        
+        if (!self.Teams.TryGetValue(player.TeamId, out var team))
+        {
+            Log.Error("当前不存在此队伍，队伍ID:" + player.TeamId);
+            return;
+        }
+        
+        //将每个LobbyPlayer的TeamId清空
+        player.TeamId = 0;
+        
+        //接着是所有的成员
+        //队长解散队伍 ， 所以直接给所有成员发送解散消息
+        TeamStateChangeMessage message = new TeamStateChangeMessage();
+        message.teamState = 3;
+        team.TeamMembers.ForEach(member =>
+        {
+            if (!self.LobbyPlayers.TryGetValue(member.memberAccountId, out player))
+            {
+                Log.Error("当前大厅不存在此玩家，玩家ID:" + playerId);
+                return;
+            }
+
+            player.TeamId = 0;
+            player.Session.Send(message);
+        });
+
+        //最后删除队伍
+        self.Teams.Remove(team.TeamId);
+    }
+    
+    
+    
+    #endregion
 }

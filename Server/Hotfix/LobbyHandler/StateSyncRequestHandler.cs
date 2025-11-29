@@ -5,7 +5,7 @@ using Fantasy.Network;
 using Fantasy.Network.Interface;
 using Hotfix.System;
 
-namespace Hotfix.Lobby;
+namespace Hotfix.LobbyHandler;
 
 public class StateSyncRequestHandler : MessageRPC<StateSyncRequest, StateSyncResponse>
 {

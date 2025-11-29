@@ -1619,3 +1619,34 @@
 2025-11-27 21:43:09.0691  当前没有其他玩家在线，无需广播状态同步消息
 2025-11-27 21:45:22.6520  玩家上次上线位置：x:6.919572, y:0, z:-8.343602
 2025-11-27 21:45:22.6520  向ID:490680308520452097发送其他玩家登录请求
+2025-11-27 21:52:19.3852 (EntryLobbyRequestHandler.cs:65) 玩家上次上线位置：x:7.566293, y:0, z:2.0891573
+2025-11-27 21:52:19.3852 (EntryLobbyRequestHandler.cs:83) 当前没有其他玩家在线，无需广播
+2025-11-27 21:52:20.3036 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:20.3839 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:20.4907 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:20.5844 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:20.6775 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:20.7877 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:20.8789 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:20.9873 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:21.0949 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:21.1884 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:21.2946 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:21.3890 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:21.4982 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:21.5908 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:21.7008 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:21.7782 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:21.9019 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:21.9940 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:22.0882 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:22.1811 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:22.2920 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-27 21:52:40.7062 (EntryLobbyRequestHandler.cs:65) 玩家上次上线位置：x:5.5151854, y:0, z:3.4120944
+2025-11-27 21:52:40.7095 (EntryLobbyRequestHandler.cs:96) 向ID:490690375923793921发送其他玩家登录请求
+2025-11-27 21:54:22.4934 (SessionDisposeComponentSystem.cs:57) 向玩家ID:489242989124911105 发送玩家ID:490676460229754881下线消息
+2025-11-27 21:54:22.6541 (SessionDisposeComponentSystem.cs:77) 账号ID:490676460229754881 数据已保存到数据库
+2025-11-27 21:54:22.6541 (SessionDisposeComponentSystem.cs:64) 玩家ID:490676460229754881 下线成功 , 下线位置:x:6.1882205, y:0, z:5.3450823
+2025-11-27 21:54:26.1126 (SessionDisposeComponentSystem.cs:28) 当前服务器上没有其他玩家在线，无需广播下线消息
+2025-11-27 21:54:26.1280 (SessionDisposeComponentSystem.cs:77) 账号ID:489242989124911105 数据已保存到数据库
+2025-11-27 21:54:26.1280 (SessionDisposeComponentSystem.cs:34) 玩家ID:489242989124911105 下线成功 , 下线位置:x:8.094211, y:0, z:3.0731182

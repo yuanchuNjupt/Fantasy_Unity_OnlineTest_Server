@@ -12,6 +12,48 @@ public class SessionDisposeCallBack : DestroySystem<SessionDisposeComponent>
     protected override async void Destroy(SessionDisposeComponent self)
     {
         var lobbyPlayerManager = self.Scene.GetComponent<LobbyPlayerManagerComponent>();
+
+
+        #region 队伍相关 
+        
+        //如果玩家有在队伍中，则需要发送离开队伍消息
+        
+        
+        
+        //看看玩家是队长还是队员
+        if (!lobbyPlayerManager.LobbyPlayers.TryGetValue(self.AccountId, out var player))
+        {
+            Log.Error("玩家下线时，未能在玩家管理器中找到该玩家，玩家ID:" + self.AccountId);
+            
+        }
+        //看看玩家是否在队伍中
+        if (player.TeamId != 0)
+        {
+            //玩家在队伍中，需要处理离开队伍逻辑
+            if (!lobbyPlayerManager.Teams.TryGetValue(player.TeamId, out var team))
+            {
+                Log.Error("玩家下线时，未能在队伍管理器中找到该玩家所在队伍，玩家ID:" + self.AccountId + "，队伍ID:" + player.TeamId);
+            }
+
+            if (team.TeamOwner.memberAccountId == self.AccountId)
+            {
+                //玩家是队长，解散队伍
+                lobbyPlayerManager.RemoveTeam(self.AccountId);
+            }
+            else
+            {
+                //玩家是队员，离开队伍
+                lobbyPlayerManager.LevelTeam(self.AccountId);
+            }
+        }
+
+       
+        
+        
+        #endregion
+        
+        
+        
         var res = lobbyPlayerManager.RemovePlayer(self.AccountId);
     
         if (res.errorCode != 0)
@@ -56,6 +98,12 @@ public class SessionDisposeCallBack : DestroySystem<SessionDisposeComponent>
             otherPlayer.Session.Send(logoutMsg);
             Log.Debug($"向玩家ID:{otherPlayer.AccountId} 发送玩家ID:{self.AccountId}下线消息");
         }
+        
+  
+        
+        
+        
+        
         
         //保存Account数据到数据库（包含Role数据）
         if (res.account != null)

@@ -80,15 +80,6 @@ message OtherPlayerLogoutMessage // IMessage
   int64 playerId = 1;
 }
 
-//message PlayerData
-//{
-//  int64 playerId = 1;
-//  CSVector3 position = 2;
-//  CSVector3 renderDir = 3;
-//}
-
-
-
 //状态同步请求
 message StateSyncRequest // IRequest , StateSyncResponse
 {
@@ -106,6 +97,39 @@ message StateSyncResponse // IResponse
 message OtherPlayerStateSyncMessage // IMessage
 {
   stateSyncData roleData = 1;
+}
+
+
+
+//组队相关
+message CreateTeamRequest // IRequest , CreateTeamResponse
+{
+  int64 playerId = 1;
+}
+
+message CreateTeamResponse // IResponse
+{
+  int64 teamId = 1;
+  int64 playerId = 2;
+}
+
+message JoinTeamRequest // IRequest , JoinTeamResponse
+{
+  int64 teamId = 1;
+  int64 playerId = 2;
+}
+
+message JoinTeamResponse // IResponse
+{
+  int64 teamId = 1;
+  int64 teamOwnerId = 2;
+  repeated int64 teamMemberIds = 3;
+}
+
+message TeamStateChangeMessage // IMessage
+{
+  int32 teamState = 1; //1 : 玩家加入 / 2 : 玩家离开 / 3 : 队伍解散
+  int64 playerId = 2;
 }
 
 

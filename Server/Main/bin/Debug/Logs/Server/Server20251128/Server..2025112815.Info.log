@@ -1,0 +1,77 @@
+2025-11-28 15:56:38.6093  
+
+==========================================================================
+ 
+  ███████╗ █████╗ ███╗   ██╗████████╗ █████╗  ██████╗ ██╗   ██╗
+  ██╔════╝██╔══██╗████╗  ██║╚══██╔══╝██╔══██╗██╔════╝ ╚██╗ ██╔╝
+  █████╗  ███████║██╔██╗ ██║   ██║   ███████║╚█████╗   ╚████╔╝ 
+  ██╔══╝  ██╔══██║██║╚██╗██║   ██║   ██╔══██║╚════██║   ╚██╔╝  
+  ██║     ██║  ██║██║ ╚████║   ██║   ██║  ██║██████╔╝    ██║   
+  ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═════╝     ╚═╝   
+                                                            
+ Version : Fantasy 2.0 Official version
+==========================================================================
+
+2025-11-28 15:56:38.6728  Current inner network protocol:TCP
+2025-11-28 15:56:38.6728  Max Message Size(byte):1048560
+2025-11-28 15:56:38.6728  Current session idle timeout:8000
+2025-11-28 15:56:38.6728  Session-check interval:5000 
+2025-11-28 15:56:39.8034  dbName:OnlineTest Initialize the db database and connect to the target.
+2025-11-28 15:57:10.7081  SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-11-28 15:57:11.1985  SceneConfigId = 1001 networkTarget = Outer KCPServer Listen 0.0.0.0:20000
+2025-11-28 15:57:11.1985  Process:1 Startup Complete SceneCount:1
+2025-11-28 15:58:04.3438  
+
+==========================================================================
+ 
+  ███████╗ █████╗ ███╗   ██╗████████╗ █████╗  ██████╗ ██╗   ██╗
+  ██╔════╝██╔══██╗████╗  ██║╚══██╔══╝██╔══██╗██╔════╝ ╚██╗ ██╔╝
+  █████╗  ███████║██╔██╗ ██║   ██║   ███████║╚█████╗   ╚████╔╝ 
+  ██╔══╝  ██╔══██║██║╚██╗██║   ██║   ██╔══██║╚════██║   ╚██╔╝  
+  ██║     ██║  ██║██║ ╚████║   ██║   ██║  ██║██████╔╝    ██║   
+  ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═════╝     ╚═╝   
+                                                            
+ Version : Fantasy 2.0 Official version
+==========================================================================
+
+2025-11-28 15:58:04.3962  Current inner network protocol:TCP
+2025-11-28 15:58:04.3962  Max Message Size(byte):1048560
+2025-11-28 15:58:04.3962  Current session idle timeout:8000
+2025-11-28 15:58:04.3962  Session-check interval:5000 
+2025-11-28 15:58:04.8917  dbName:OnlineTest Initialize the db database and connect to the target.
+2025-11-28 15:58:05.2301  dbName:OnlineTest Database connection successful.
+2025-11-28 15:58:05.5989  SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-11-28 15:58:05.8988  SceneConfigId = 1001 networkTarget = Outer KCPServer Listen 0.0.0.0:20000
+2025-11-28 15:58:05.8988  Process:1 Startup Complete SceneCount:1
+2025-11-28 15:58:17.9265 (AuthenticationAccountComponentSystem.cs:39) 账号不存在，可以注册:333
+2025-11-28 15:58:27.9881 (LoginRequestHandler.cs:19) 收到登录请求
+2025-11-28 15:58:29.8882 (RegisterNameRequestHandler.cs:15) 收到注册名称请求，账号：333，名称：1231
+2025-11-28 15:58:29.9171 (AuthenticationAccountComponentSystem.cs:115) 账号名称注册成功 账号：333 名称：1231
+2025-11-28 15:58:29.9562 (EntryLobbyRequestHandler.cs:32) 进入大厅成功，玩家ID:491809781840084993
+2025-11-28 15:58:31.2223 (LobbyPlayerManagerComponentSystem.cs:97) 玩家ID:491809781840084993 移动方向: -0.95634365 , 0 , -0.29224446
+2025-11-28 15:58:31.2223 (LobbyPlayerManagerComponentSystem.cs:102) 玩家ID:491809781840084993 移动到新位置: -0.19126874 , 0 , -0.058448892
+2025-11-28 15:58:31.2987 (LobbyPlayerManagerComponentSystem.cs:97) 玩家ID:491809781840084993 移动方向: -0.9795007 , 0 , 0.20144078
+2025-11-28 15:58:31.2987 (LobbyPlayerManagerComponentSystem.cs:102) 玩家ID:491809781840084993 移动到新位置: -0.38716888 , 0 , -0.018160738
+2025-11-28 15:58:31.3914 (LobbyPlayerManagerComponentSystem.cs:97) 玩家ID:491809781840084993 移动方向: -0.6825579 , 0 , -0.73083156
+2025-11-28 15:58:31.3914 (LobbyPlayerManagerComponentSystem.cs:102) 玩家ID:491809781840084993 移动到新位置: -0.52368045 , 0 , -0.16432706
+2025-11-28 15:58:31.4999 (LobbyPlayerManagerComponentSystem.cs:97) 玩家ID:491809781840084993 移动方向: -0.57293546 , 0 , -0.81960046
+2025-11-28 15:58:31.4999 (LobbyPlayerManagerComponentSystem.cs:102) 玩家ID:491809781840084993 移动到新位置: -0.6382675 , 0 , -0.32824713
+2025-11-28 15:58:31.6091 (LobbyPlayerManagerComponentSystem.cs:97) 玩家ID:491809781840084993 移动方向: 0.78426236 , 0 , -0.6204294
+2025-11-28 15:58:31.6091 (LobbyPlayerManagerComponentSystem.cs:102) 玩家ID:491809781840084993 移动到新位置: -0.48141503 , 0 , -0.452333
+2025-11-28 15:58:31.7002 (LobbyPlayerManagerComponentSystem.cs:97) 玩家ID:491809781840084993 移动方向: 0.67019874 , 0 , -0.7421817
+2025-11-28 15:58:31.7002 (LobbyPlayerManagerComponentSystem.cs:102) 玩家ID:491809781840084993 移动到新位置: -0.34737527 , 0 , -0.60076934
+2025-11-28 15:58:31.7939 (LobbyPlayerManagerComponentSystem.cs:97) 玩家ID:491809781840084993 移动方向: -0.23162341 , 0 , -0.9728055
+2025-11-28 15:58:31.7939 (LobbyPlayerManagerComponentSystem.cs:102) 玩家ID:491809781840084993 移动到新位置: -0.39369994 , 0 , -0.7953304
+2025-11-28 15:58:31.9030 (LobbyPlayerManagerComponentSystem.cs:97) 玩家ID:491809781840084993 移动方向: -0.90643305 , 0 , -0.4223495
+2025-11-28 15:58:31.9030 (LobbyPlayerManagerComponentSystem.cs:102) 玩家ID:491809781840084993 移动到新位置: -0.5749866 , 0 , -0.8798003
+2025-11-28 15:58:32.0109 (LobbyPlayerManagerComponentSystem.cs:97) 玩家ID:491809781840084993 移动方向: -0.93578494 , 0 , 0.35257125
+2025-11-28 15:58:32.0109 (LobbyPlayerManagerComponentSystem.cs:102) 玩家ID:491809781840084993 移动到新位置: -0.76214355 , 0 , -0.80928606
+2025-11-28 15:58:32.0879 (LobbyPlayerManagerComponentSystem.cs:97) 玩家ID:491809781840084993 移动方向: -0.42407495 , 0 , 0.90562713
+2025-11-28 15:58:32.0879 (LobbyPlayerManagerComponentSystem.cs:102) 玩家ID:491809781840084993 移动到新位置: -0.8469585 , 0 , -0.62816066
+2025-11-28 15:58:32.2110 (LobbyPlayerManagerComponentSystem.cs:97) 玩家ID:491809781840084993 移动方向: -0.9431387 , 0 , 0.33239925
+2025-11-28 15:58:32.2110 (LobbyPlayerManagerComponentSystem.cs:102) 玩家ID:491809781840084993 移动到新位置: -1.0355862 , 0 , -0.5616808
+2025-11-28 15:58:32.3041 (LobbyPlayerManagerComponentSystem.cs:97) 玩家ID:491809781840084993 移动方向: -0.9442198 , 0 , 0.32931566
+2025-11-28 15:58:32.3041 (LobbyPlayerManagerComponentSystem.cs:102) 玩家ID:491809781840084993 移动到新位置: -1.2244302 , 0 , -0.49581766
+2025-11-28 15:58:32.3967 (LobbyPlayerManagerComponentSystem.cs:97) 玩家ID:491809781840084993 移动方向: -0.4358633 , 0 , 0.9000129
+2025-11-28 15:58:32.3967 (LobbyPlayerManagerComponentSystem.cs:102) 玩家ID:491809781840084993 移动到新位置: -1.3116028 , 0 , -0.3158151
+2025-11-28 15:58:32.5052 (LobbyPlayerManagerComponentSystem.cs:102) 玩家ID:491809781840084993 移动到新位置: -1.3116028 , 0 , -0.3158151

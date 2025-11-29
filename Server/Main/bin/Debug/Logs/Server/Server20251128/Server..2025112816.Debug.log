@@ -1,0 +1,20 @@
+2025-11-28 16:00:42.1304 (EntryLobbyRequestHandler.cs:65) 玩家上次上线位置：x:8.094211, y:0, z:3.0731182
+2025-11-28 16:00:42.1304 (EntryLobbyRequestHandler.cs:83) 当前没有其他玩家在线，无需广播
+2025-11-28 16:00:43.2172 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 16:00:43.3096 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 16:00:43.4197 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 16:00:43.5127 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 16:00:43.6079 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 16:00:43.7187 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 16:00:43.8123 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 16:00:43.9220 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 16:00:44.0152 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 16:00:44.1233 (StateSyncRequestHandler.cs:36) 当前没有其他玩家在线，无需广播状态同步消息
+2025-11-28 16:01:02.7424 (EntryLobbyRequestHandler.cs:65) 玩家上次上线位置：x:6.1882205, y:0, z:5.3450823
+2025-11-28 16:01:02.7424 (EntryLobbyRequestHandler.cs:96) 向ID:491812272921116673发送其他玩家登录请求
+2025-11-28 16:02:00.3967 (SessionDisposeComponentSystem.cs:57) 向玩家ID:490676460229754881 发送玩家ID:489242989124911105下线消息
+2025-11-28 16:02:00.3967 (SessionDisposeComponentSystem.cs:77) 账号ID:489242989124911105 数据已保存到数据库
+2025-11-28 16:02:00.3967 (SessionDisposeComponentSystem.cs:64) 玩家ID:489242989124911105 下线成功 , 下线位置:x:6.5376353, y:0, z:2.9060254
+2025-11-28 16:02:04.1663 (SessionDisposeComponentSystem.cs:28) 当前服务器上没有其他玩家在线，无需广播下线消息
+2025-11-28 16:02:04.1807 (SessionDisposeComponentSystem.cs:77) 账号ID:490676460229754881 数据已保存到数据库
+2025-11-28 16:02:04.1807 (SessionDisposeComponentSystem.cs:34) 玩家ID:490676460229754881 下线成功 , 下线位置:x:5.566504, y:0, z:4.802095

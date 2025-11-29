@@ -18,4 +18,8 @@ public class ErrorCode
     
     public const uint NAME_HAS_BE_REGISTER = 2004;
     
+    public const uint TEAM_NOT_FOUND = 2005;
+
+    public const uint TEAM_MAX = 2006;
+
 }

@@ -1,0 +1,17 @@
+2025-11-29 21:00:33.3147 (SessionDisposeComponentSystem.cs:29) 玩家下线时，未能在队伍管理器中找到该玩家所在队伍，玩家ID:482736422909116417，队伍ID:1000
+2025-11-29 21:00:36.2179 (SessionDisposeComponentSystem.cs:29) 玩家下线时，未能在队伍管理器中找到该玩家所在队伍，玩家ID:482734309785206785，队伍ID:1000
+2025-11-29 21:09:43.8964 (EntryLobbyRequestHandler.cs:65) 玩家上次上线位置：x:3.4200916, y:0, z:-4.02859
+2025-11-29 21:09:43.8964 (EntryLobbyRequestHandler.cs:83) 当前没有其他玩家在线，无需广播
+2025-11-29 21:09:57.5583 (EntryLobbyRequestHandler.cs:65) 玩家上次上线位置：x:3.9365137, y:0, z:-2.3139818
+2025-11-29 21:09:57.5583 (EntryLobbyRequestHandler.cs:96) 向ID:493615145573154817发送其他玩家登录请求
+2025-11-29 21:11:09.7500 (SessionDisposeComponentSystem.cs:99) 向玩家ID:482734309785206785 发送玩家ID:482736422909116417下线消息
+2025-11-29 21:11:09.9100 (SessionDisposeComponentSystem.cs:125) 账号ID:482736422909116417 数据已保存到数据库
+2025-11-29 21:11:09.9100 (SessionDisposeComponentSystem.cs:112) 玩家ID:482736422909116417 下线成功 , 下线位置:x:3.0600598, y:0, z:-3.4000864
+2025-11-29 21:11:40.7081 (EntryLobbyRequestHandler.cs:65) 玩家上次上线位置：x:3.0600598, y:0, z:-3.4000864
+2025-11-29 21:11:40.7239 (EntryLobbyRequestHandler.cs:96) 向ID:493615145573154817发送其他玩家登录请求
+2025-11-29 21:11:56.7172 (SessionDisposeComponentSystem.cs:99) 向玩家ID:482734309785206785 发送玩家ID:482736422909116417下线消息
+2025-11-29 21:11:56.7308 (SessionDisposeComponentSystem.cs:125) 账号ID:482736422909116417 数据已保存到数据库
+2025-11-29 21:11:56.7308 (SessionDisposeComponentSystem.cs:112) 玩家ID:482736422909116417 下线成功 , 下线位置:x:2.1061962, y:0, z:-3.9756649
+2025-11-29 21:12:23.3232 (SessionDisposeComponentSystem.cs:70) 当前服务器上没有其他玩家在线，无需广播下线消息
+2025-11-29 21:12:23.3387 (SessionDisposeComponentSystem.cs:125) 账号ID:482734309785206785 数据已保存到数据库
+2025-11-29 21:12:23.3387 (SessionDisposeComponentSystem.cs:76) 玩家ID:482734309785206785 下线成功 , 下线位置:x:3.4200916, y:0, z:-4.02859

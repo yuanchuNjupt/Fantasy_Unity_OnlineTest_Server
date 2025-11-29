@@ -1,0 +1,30 @@
+2025-11-28 15:57:10.1538  dbName:OnlineTest cannot connect to the database. Please check if the connectionString is correct or the network conditions.
+A timeout occurred after 30008ms selecting a server using CompositeServerSelector{ Selectors = ReadPreferenceServerSelector{ ReadPreference = { Mode : Primary } }, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 }, OperationsCountServerSelector }. Client view of cluster state is { ClusterId : "1", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/localhost:27017" }", EndPoint: "Unspecified/localhost:27017", ReasonChanged: "Heartbeat", State: "Disconnected", ServerVersion: , TopologyVersion: , Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server.
+ ---> System.Net.Sockets.SocketException (10061): 由于目标计算机积极拒绝，无法连接。
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.TaskToAsyncResult.End(IAsyncResult asyncResult)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.Connect(Socket socket, EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStream(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(OperationContext operationContext)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(OperationContext operationContext)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(OperationContext operationContext)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.InitializeConnection(OperationContext operationContext)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.Heartbeat(CancellationToken cancellationToken)", LastHeartbeatTimestamp: "2025-11-28T07:57:07.2838757Z", LastUpdateTimestamp: "2025-11-28T07:57:07.2838765Z" }] }.
+   at Fantasy.Database.MongoDatabase.Initialize(Scene scene, String connectionString, String dbName)
+   at Fantasy.World..ctor(Scene scene, Byte worldConfigId)
+   at Fantasy.World.Create(Scene scene, Byte id)
+   at Fantasy.Scene.Create(Process process, MachineConfig machineConfig, SceneConfig sceneConfig)
+   at Fantasy.Scene.SetScheduler(Scene scene, String sceneRuntimeMode)
+   at Fantasy.Scene.Initialize()
+   at Fantasy.Sphere.SphereEventComponent.Initialize()
+   at Fantasy.Assembly.AssemblyLifecycle.Add(IAssemblyLifecycle assemblyLifecycle)
+   at Fantasy.Sphere.SphereEventComponent.OnLoad(AssemblyManifest assemblyManifest)
+   at Fantasy.Sphere.SphereEventComponent.<>c__DisplayClass3_0.<OnLoad>b__0()
+   at Fantasy.ThreadSynchronizationContext.Update()
+   at Fantasy.MultiThreadScheduler.Loop(Scene scene, CancellationToken cancellationToken)
+   at Fantasy.MultiThreadScheduler.<>c__DisplayClass5_0.<Add>b__0()
+
