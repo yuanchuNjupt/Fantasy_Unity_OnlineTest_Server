@@ -10,6 +10,14 @@ namespace Hotfix.System;
 
 public static class LobbyPlayerManagerComponentSystem
 {
+    
+    /// <summary>
+    /// 添加大厅中的玩家
+    /// </summary>
+    /// <param name="self"></param>
+    /// <param name="session"></param>
+    /// <param name="playerId"></param>
+    /// <returns></returns>
     public static async FTask<uint> AddPlayer(this LobbyPlayerManagerComponent self , Session session , long playerId)
     {
         var player = Entity.Create<LobbyPlayer>(self.Scene , true , true);
@@ -44,11 +52,34 @@ public static class LobbyPlayerManagerComponentSystem
         return ErrorCode.SUCCESS;
     }
     
+    /// <summary>
+    /// 得到大厅中的所有玩家列表， 可选过滤掉指定ID的玩家
+    /// </summary>
+    /// <param name="self"></param>
+    /// <param name="filterId"></param>
+    /// <returns></returns>
     public static IEnumerable<LobbyPlayer?> GetLobbyPlayers(this LobbyPlayerManagerComponent self , long filterId = 0)
     {
         return self.LobbyPlayers.Values.Where(x => x.AccountId != filterId);  // 使用 AccountId 进行过滤
     }
+
+    public static List<LobbyPlayer>? GetLobbyPlayersByIds(this LobbyPlayerManagerComponent self, List<long> playerIds)
+    {
+        var list = self.LobbyPlayers.Values.Where(x => playerIds.Contains(x.AccountId)).ToList();
+        if (list.Count != playerIds.Count)
+        {
+            Log.Warning("有玩家ID未找到，可能不在大厅中");
+        }
+        return list;
+    }
     
+    
+    /// <summary>
+    /// 移除大厅中的玩家
+    /// </summary>
+    /// <param name="self"></param>
+    /// <param name="playerId"></param>
+    /// <returns></returns>
     public static (uint errorCode , Account? account) RemovePlayer(this LobbyPlayerManagerComponent self , long playerId)
     {
         if (self.LobbyPlayers.ContainsKey(playerId))
@@ -77,8 +108,15 @@ public static class LobbyPlayerManagerComponentSystem
         }
     }
 
-    public static (stateSyncData? syncData, uint errorCode) PlayerMove(this LobbyPlayerManagerComponent self,
-        stateSyncData syncData)
+    
+    /// <summary>
+    /// 同步玩家移动状态
+    /// </summary>
+    /// <param name="self"></param>
+    /// <param name="syncData"></param>
+    /// <returns></returns>
+    public static (StateSyncData? syncData, uint errorCode) PlayerMove(this LobbyPlayerManagerComponent self,
+        StateSyncData syncData)
     {
         //获取这个玩家
         if (!self.LobbyPlayers.TryGetValue(syncData.playerId, out var player))
@@ -87,15 +125,43 @@ public static class LobbyPlayerManagerComponentSystem
             return (null, ErrorCode.PLAYER_NOT_FOUND);
         }
 
-        player.Position.x += syncData.inputDir.x * self.FixedDeltaTime * player.role.moveSpeed;
-        player.Position.y += syncData.inputDir.y * self.FixedDeltaTime * player.role.moveSpeed;
-        player.Position.z += syncData.inputDir.z * self.FixedDeltaTime * player.role.moveSpeed;
+        if (syncData.playerState == 1)
+        {
+            // //没输入
+            // if (player.PlayerState == 3)
+            // {
+            //     //上一次同步为冲刺，急停一段距离
+            //     player.Position.x += player.RenderDir.x * player.role.sprintEndDistance;
+            //     player.Position.y += player.RenderDir.y * player.role.sprintEndDistance;
+            //     player.Position.z += player.RenderDir.z * player.role.sprintEndDistance;
+            //     
+            // }
+            player.PlayerState = 1;
+        }
+        else if (syncData.playerState == 2)
+        {
+            //跑步
+            player.Position.x += syncData.inputDir.x * self.FixedDeltaTime * player.role.moveSpeed;
+            player.Position.y += syncData.inputDir.y * self.FixedDeltaTime * player.role.moveSpeed;
+            player.Position.z += syncData.inputDir.z * self.FixedDeltaTime * player.role.moveSpeed;
+            player.PlayerState = 2;
+        }
+        else if (syncData.playerState == 3)
+        {
+            //冲刺
+            player.Position.x += syncData.inputDir.x * self.FixedDeltaTime * player.role.sprintSpeed;
+            player.Position.y += syncData.inputDir.y * self.FixedDeltaTime * player.role.sprintSpeed;
+            player.Position.z += syncData.inputDir.z * self.FixedDeltaTime * player.role.sprintSpeed;
+            player.PlayerState = 3;
+        }
+        
 
         if (syncData.inputDir.x != 0 || syncData.inputDir.y != 0 || syncData.inputDir.z != 0)
         {
             player.RenderDir = syncData.inputDir.ToVector3();
             Log.Info("玩家ID:" + syncData.playerId + " 移动方向: " + syncData.inputDir.x + " , " + syncData.inputDir.y + " , " + syncData.inputDir.z);
         }
+
         
         //更新状态数据
         syncData.position = player.Position.ToCSVector3();
@@ -107,6 +173,13 @@ public static class LobbyPlayerManagerComponentSystem
 
     #region 组队相关
 
+    
+    /// <summary>
+    /// 队长创建一个队伍
+    /// </summary>
+    /// <param name="self"></param>
+    /// <param name="playerId"></param>
+    /// <returns></returns>
     public static (long teamId , uint errorCode) CreateTeam(this LobbyPlayerManagerComponent self, long playerId)
     {
         if (!self.LobbyPlayers.TryGetValue(playerId, out var player))
@@ -130,6 +203,13 @@ public static class LobbyPlayerManagerComponentSystem
         return (team.TeamId, ErrorCode.SUCCESS);
     }
 
+    /// <summary>
+    /// 玩家加入一个队伍(包括消息广播)
+    /// </summary>
+    /// <param name="self"></param>
+    /// <param name="playerId"></param>
+    /// <param name="teamId"></param>
+    /// <returns></returns>
     public static (Team? team, uint errorCode) JoinTeam(this LobbyPlayerManagerComponent self, long playerId,
         long teamId)
     {
@@ -184,7 +264,12 @@ public static class LobbyPlayerManagerComponentSystem
         return (team, ErrorCode.SUCCESS);
     }
 
-
+    
+    /// <summary>
+    /// 玩家离开队伍(包括消息广播)
+    /// </summary>
+    /// <param name="self"></param>
+    /// <param name="playerId"></param>
     public static void LevelTeam(this LobbyPlayerManagerComponent self, long playerId)
     {
         //查看玩家存在的队伍是哪个
@@ -204,8 +289,6 @@ public static class LobbyPlayerManagerComponentSystem
         team.TeamMembers.RemoveAll(x => x.memberAccountId == playerId);
         //在把自己的TeamId清空
         player.TeamId = 0;
-        
-        
         //在这里向队伍中的其他成员广播成员离开消息
         TeamStateChangeMessage message = new TeamStateChangeMessage();
         message.playerId = playerId;
@@ -241,6 +324,11 @@ public static class LobbyPlayerManagerComponentSystem
         
     }
 
+    /// <summary>
+    /// 移除队伍(包括消息广播)
+    /// </summary>
+    /// <param name="self"></param>
+    /// <param name="playerId"></param>
     public static void RemoveTeam(this LobbyPlayerManagerComponent self, long playerId)
     {
         //查看玩家存在的队伍是哪个
@@ -278,6 +366,72 @@ public static class LobbyPlayerManagerComponentSystem
         //最后删除队伍
         self.Teams.Remove(team.TeamId);
     }
+    
+    /// <summary>
+    /// 得到队伍成员ID列表，包括队长
+    /// </summary>
+    /// <param name="self"></param>
+    /// <param name="teamId"></param>
+    /// <returns></returns>
+    public static List<long>? GetTeamMemberIds(this LobbyPlayerManagerComponent self , long teamId)
+    {
+        if (!self.Teams.TryGetValue(teamId, out var team))
+        {
+            Log.Error("当前不存在此队伍，队伍ID:" + teamId);
+            return null;
+        }
+
+        var list = team.TeamMembers.Select(x => x.memberAccountId).ToList();
+        list.Add(team.TeamOwner.memberAccountId);
+        return list;
+    }
+    
+    public static bool SyncLoadingProgress(this LobbyPlayerManagerComponent self , long teamId , long playerId , float progress)
+    {
+       //获取队伍
+       if(!self.Teams.TryGetValue(teamId , out var team))
+       {
+           Log.Error("当前不存在此队伍，队伍ID:" + teamId);
+           return false;
+       }
+
+       if (!self.TeamLoadProgress.TryGetValue(teamId, out var loadProgress))
+       {
+           //还没有这个队伍的加载进度，创建一个
+           loadProgress = new Dictionary<long, float>();
+           self.TeamLoadProgress[teamId] = loadProgress;
+       }
+
+
+       if (!loadProgress.TryGetValue(playerId, out var loadingValue))
+       {
+           //还没有这个玩家的加载进度，添加一个
+           loadProgress.Add(playerId , progress);
+       }
+       else
+       {
+           //存在，更新进度
+           loadProgress[playerId] = progress;
+       }
+       
+       //看一下是否所有人都加载完毕
+       
+       if(loadProgress.Count != team.TeamMembers.Count + 1)
+       {
+           //人数还不够，说明还有人没开始加载
+           return false;
+       }
+       
+       //看看是否都加载完毕
+       return loadProgress.Values.All(value => !(value < 1.0f));
+    }
+    
+    public static void ClearTeamLoadProgress(this LobbyPlayerManagerComponent self , long teamId)
+    {
+        self.TeamLoadProgress.Remove(teamId);
+    }
+    
+    
     
     
     

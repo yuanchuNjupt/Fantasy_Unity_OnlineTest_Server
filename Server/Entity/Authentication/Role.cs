@@ -9,6 +9,11 @@ public class Role : Entity
     //角色移速
     public float moveSpeed = 10f;
     
+    //角色冲刺速度
+    public float sprintSpeed = 15f;
+    
+    public float sprintEndDistance = 2f;
+    
     //角色上次下线的位置
     public Vector3 LastPosition;
     

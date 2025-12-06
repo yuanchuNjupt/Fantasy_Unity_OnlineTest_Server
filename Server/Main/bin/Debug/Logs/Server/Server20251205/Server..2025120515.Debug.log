@@ -1,0 +1,10 @@
+2025-12-05 15:57:13.5608 (EntryLobbyRequestHandler.cs:65) 玩家上次上线位置：x:3.4200916, y:0, z:-4.02859
+2025-12-05 15:57:13.5608 (EntryLobbyRequestHandler.cs:83) 当前没有其他玩家在线，无需广播
+2025-12-05 15:57:13.6256 (SessionDisposeComponentSystem.cs:70) 当前服务器上没有其他玩家在线，无需广播下线消息
+2025-12-05 15:57:13.7198 (SessionDisposeComponentSystem.cs:125) 账号ID:482734309785206785 数据已保存到数据库
+2025-12-05 15:57:13.7198 (SessionDisposeComponentSystem.cs:76) 玩家ID:482734309785206785 下线成功 , 下线位置:x:3.4200916, y:0, z:-4.02859
+2025-12-05 15:58:17.4451 (EntryLobbyRequestHandler.cs:65) 玩家上次上线位置：x:3.4200916, y:0, z:-4.02859
+2025-12-05 15:58:17.4451 (EntryLobbyRequestHandler.cs:83) 当前没有其他玩家在线，无需广播
+2025-12-05 15:58:17.4865 (SessionDisposeComponentSystem.cs:70) 当前服务器上没有其他玩家在线，无需广播下线消息
+2025-12-05 15:58:17.4899 (SessionDisposeComponentSystem.cs:125) 账号ID:482734309785206785 数据已保存到数据库
+2025-12-05 15:58:17.4899 (SessionDisposeComponentSystem.cs:76) 玩家ID:482734309785206785 下线成功 , 下线位置:x:3.4200916, y:0, z:-4.02859

@@ -13,7 +13,14 @@ public class LobbyPlayerManagerComponent : Entity
     /// Lobby当前所有队伍
     /// </summary>
     public Dictionary<long , Team> Teams = new Dictionary<long , Team>();
-
+    
+    
+    /// <summary>
+    /// Key: TeamId
+    /// Value: Key: PlayerId , Value: LoadProgress
+    /// </summary>
+    public Dictionary<long , Dictionary<long , float>> TeamLoadProgress = new Dictionary<long , Dictionary<long , float>>();
+    
     //从1000开始 
     public long TeamIdStart = 1000;
     

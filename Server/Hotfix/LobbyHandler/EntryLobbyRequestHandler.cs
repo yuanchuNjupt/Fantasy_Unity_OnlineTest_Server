@@ -34,12 +34,12 @@ public class EntryLobbyRequestHandler : MessageRPC<EntryLobbyRequest,EntryLobbyR
         
         
         
-        List<stateSyncData> otherPlayersData = new ();
+        List<StateSyncData> otherPlayersData = new ();
         
         for (int i = 0; i < otherPlayers.Count(); i++)
         {
             //注意引用类型问题
-            stateSyncData playerData = new ();
+            StateSyncData playerData = new ();
             playerData.playerId = otherPlayers[i].AccountId;
             playerData.position = otherPlayers[i].Position.ToCSVector3();
             playerData.inputDir = otherPlayers[i].RenderDir.ToCSVector3();
@@ -64,7 +64,7 @@ public class EntryLobbyRequestHandler : MessageRPC<EntryLobbyRequest,EntryLobbyR
         
         Log.Debug("玩家上次上线位置：" + selfAccount.role.LastPosition);
 
-        response.selfData = new stateSyncData()
+        response.selfData = new StateSyncData()
         {
             playerId = request.accountId,
             position = selfAccount.role.LastPosition.ToCSVector3(),

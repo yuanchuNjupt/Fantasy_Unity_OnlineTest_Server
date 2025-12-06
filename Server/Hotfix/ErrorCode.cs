@@ -21,5 +21,24 @@ public class ErrorCode
     public const uint TEAM_NOT_FOUND = 2005;
 
     public const uint TEAM_MAX = 2006;
+    
+    // Chat相关错误码
+    public const uint Success = 0;
+    
+    public const uint PlayerAlreadyOnline = 3001;
+    
+    public const uint PlayerNotFound = 3002;
+    
+    public const uint ChannelNotFound = 3003;
+    
+    public const uint ChannelFull = 3004;
+    
+    public const uint PlayerNotInChannel = 3005;
+    
+    public const uint ReceiverNotOnline = 3006;
+    
+    public const uint MessageTooLong = 3007;
+    
+    public const uint ChatForbidden = 3008;
 
 }

@@ -41,8 +41,8 @@ message EntryLobbyRequest // IRequest , EntryLobbyResponse
 
 message EntryLobbyResponse // IResponse
 {
-  stateSyncData selfData = 1;
-  repeated stateSyncData otherPlayerData = 2;
+  StateSyncData selfData = 1;
+  repeated StateSyncData otherPlayerData = 2;
 }
 
 
@@ -65,7 +65,7 @@ message LoginResponse // IResponse
 //其他玩家登录广播
 message OtherPlayerLoginMessage // IMessage
 {
-  stateSyncData playerData = 1;
+  StateSyncData playerData = 1;
 }
 
 //玩家主动退出消息
@@ -83,20 +83,20 @@ message OtherPlayerLogoutMessage // IMessage
 //状态同步请求
 message StateSyncRequest // IRequest , StateSyncResponse
 {
-  int64 statePackageId = 1;
-  stateSyncData stateData = 2;
+  int64 tatePackageId = 1;
+  StateSyncData stateData = 2;
 }
 
 message StateSyncResponse // IResponse
 {
   int64 statePackageId = 1;
-  stateSyncData stateData = 2;
+  StateSyncData stateData = 2;
 }
 
 //广播玩家状态数据
 message OtherPlayerStateSyncMessage // IMessage
 {
-  stateSyncData roleData = 1;
+  StateSyncData roleData = 1;
 }
 
 
@@ -134,8 +134,31 @@ message TeamStateChangeMessage // IMessage
 
 
 
+
+//进入副本相关
+message EnterDungeonMessage // IMessage
+{
+  int64 teamId = 1;
+  repeated int64 teamMemberIds = 2;
+}
+
+message LoadDungeonProgressMessage // IMessage
+{
+  int64 teamId = 1;
+  int64 playerId = 2;
+  float progress = 3;
+}
+
+message StartDungeonBattleMessage // IMessage
+{
+  
+}
+
+
+
+
 // 同步玩家状态数据
-message stateSyncData
+message StateSyncData
 {
   int64 playerId = 1;
   CSVector3 position = 2;

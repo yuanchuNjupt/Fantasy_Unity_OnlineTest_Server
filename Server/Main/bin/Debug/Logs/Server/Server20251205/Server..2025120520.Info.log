@@ -1,0 +1,23 @@
+2025-12-05 20:52:22.5934  
+
+==========================================================================
+ 
+  ███████╗ █████╗ ███╗   ██╗████████╗ █████╗  ██████╗ ██╗   ██╗
+  ██╔════╝██╔══██╗████╗  ██║╚══██╔══╝██╔══██╗██╔════╝ ╚██╗ ██╔╝
+  █████╗  ███████║██╔██╗ ██║   ██║   ███████║╚█████╗   ╚████╔╝ 
+  ██╔══╝  ██╔══██║██║╚██╗██║   ██║   ██╔══██║╚════██║   ╚██╔╝  
+  ██║     ██║  ██║██║ ╚████║   ██║   ██║  ██║██████╔╝    ██║   
+  ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═════╝     ╚═╝   
+                                                            
+ Version : Fantasy 2.0 Official version
+==========================================================================
+
+2025-12-05 20:52:22.6640  Current inner network protocol:TCP
+2025-12-05 20:52:22.6640  Max Message Size(byte):1048560
+2025-12-05 20:52:22.6640  Current session idle timeout:8000
+2025-12-05 20:52:22.6640  Session-check interval:5000 
+2025-12-05 20:52:24.0436  dbName:OnlineTest Initialize the db database and connect to the target.
+2025-12-05 20:52:24.5101  dbName:OnlineTest Database connection successful.
+2025-12-05 20:52:24.8685  SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-12-05 20:52:25.1867  SceneConfigId = 1001 networkTarget = Outer KCPServer Listen 0.0.0.0:20000
+2025-12-05 20:52:25.1867  Process:1 Startup Complete SceneCount:1

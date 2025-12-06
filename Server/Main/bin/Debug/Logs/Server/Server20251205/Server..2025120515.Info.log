@@ -1,0 +1,27 @@
+2025-12-05 15:56:54.7954  
+
+==========================================================================
+ 
+  ███████╗ █████╗ ███╗   ██╗████████╗ █████╗  ██████╗ ██╗   ██╗
+  ██╔════╝██╔══██╗████╗  ██║╚══██╔══╝██╔══██╗██╔════╝ ╚██╗ ██╔╝
+  █████╗  ███████║██╔██╗ ██║   ██║   ███████║╚█████╗   ╚████╔╝ 
+  ██╔══╝  ██╔══██║██║╚██╗██║   ██║   ██╔══██║╚════██║   ╚██╔╝  
+  ██║     ██║  ██║██║ ╚████║   ██║   ██║  ██║██████╔╝    ██║   
+  ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═════╝     ╚═╝   
+                                                            
+ Version : Fantasy 2.0 Official version
+==========================================================================
+
+2025-12-05 15:56:54.8568  Current inner network protocol:TCP
+2025-12-05 15:56:54.8568  Max Message Size(byte):1048560
+2025-12-05 15:56:54.8568  Current session idle timeout:8000
+2025-12-05 15:56:54.8568  Session-check interval:5000 
+2025-12-05 15:56:56.2324  dbName:OnlineTest Initialize the db database and connect to the target.
+2025-12-05 15:56:56.6500  dbName:OnlineTest Database connection successful.
+2025-12-05 15:56:56.9986  SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-12-05 15:56:57.3068  SceneConfigId = 1001 networkTarget = Outer KCPServer Listen 0.0.0.0:20000
+2025-12-05 15:56:57.3068  Process:1 Startup Complete SceneCount:1
+2025-12-05 15:57:13.2398 (LoginRequestHandler.cs:16) 收到登录请求
+2025-12-05 15:57:13.5251 (EntryLobbyRequestHandler.cs:32) 进入大厅成功，玩家ID:482734309785206785
+2025-12-05 15:58:17.4068 (LoginRequestHandler.cs:16) 收到登录请求
+2025-12-05 15:58:17.4422 (EntryLobbyRequestHandler.cs:32) 进入大厅成功，玩家ID:482734309785206785

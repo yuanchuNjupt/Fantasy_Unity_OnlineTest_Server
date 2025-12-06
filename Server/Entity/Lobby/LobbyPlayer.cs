@@ -18,6 +18,9 @@ public class LobbyPlayer : Entity
     //玩家朝向数据
     public Vector3 RenderDir = new Vector3(0,0,1);
     
+    //玩家状态
+    public int PlayerState = 1; //1:Idle 2:Run 3:Sprint
+    
     //玩家角色数据
     public Role role;
     
