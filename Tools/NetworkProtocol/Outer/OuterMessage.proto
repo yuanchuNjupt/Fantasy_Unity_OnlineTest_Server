@@ -151,11 +151,8 @@ message LoadDungeonProgressMessage // IMessage
 
 message StartDungeonBattleMessage // IMessage
 {
-  
+  repeated BattlePlayerData battlePlayers = 1;
 }
-
-
-
 
 // 同步玩家状态数据
 message StateSyncData
@@ -174,5 +171,53 @@ message CSVector3
   float y = 2;
   float z = 3;
 }
+
+
+
+
+//操作帧数据 要保证传输越小越好，越小传输越快
+message FrameOperationData
+{
+  int32 operateType = 1;  //0 : 无操作 , 1 : 移动 , 2 : 技能
+  CSFixIntVector3 inputDir = 2;
+  int32 skillId = 3;
+  int32 skillType = 4;  //1:普通技能 2:引导技能 3:蓄力技能
+  CSFixIntVector3 skillPos = 5; //引导技能位置
+  int64 playerId = 6;
+}
+
+message FrameOperateEventMessage_C2G // IMessage
+{
+  int64 battleId = 1;
+  repeated FrameOperationData frameOperateDataList = 2;
+}
+
+message FrameOperateEventMessage_G2C // IMessage
+{
+  int64 battleId = 1;
+  repeated FrameOperationData frameOperateDataList = 2;
+  int64 logicFrameId = 3; //当前逻辑帧ID
+}
+
+
+
+//双端通用定点数
+message CSFixIntVector3
+{
+  int32 x = 1;
+  int32 y = 2;
+  int32 z = 3;
+}
+
+message BattlePlayerData
+{
+  int64 playerId = 1;
+  string playerName = 2;
+}
+
+
+
+
+
 
 

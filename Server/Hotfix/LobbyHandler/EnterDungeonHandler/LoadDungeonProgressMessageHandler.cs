@@ -1,9 +1,11 @@
 ﻿using Fantasy;
 using Fantasy.Async;
+using Fantasy.Dungeons;
 using Fantasy.Lobby;
 using Fantasy.Network;
 using Fantasy.Network.Interface;
 using Hotfix.System;
+using Hotfix.System.Dungeons;
 
 namespace Hotfix.LobbyHandler.EnterDungeonHandler;
 
@@ -21,18 +23,39 @@ public class LoadDungeonProgressMessageHandler : Message<LoadDungeonProgressMess
         {
             Log.Info("队伍：" + message.teamId + " 所有玩家加载完成 可以进入战斗场景");
             //通知所有玩家加载完成 可以进入战斗场景
-            var enterDungeonCompleteMessage = new StartDungeonBattleMessage();
-            //发送给队伍中的所有玩家
-            lobbyPlayerComponent
-                .GetLobbyPlayersByIds(lobbyPlayerComponent.GetTeamMemberIds(message.teamId)).Select(x => x.Session)
-                .ToList().ForEach(x => x.Send(enterDungeonCompleteMessage));
+
+            var battleComponent = session.Scene.GetComponent<BattleManagerComponent>();
             
-            //移除加载进度缓存
-            lobbyPlayerComponent.ClearTeamLoadProgress(message.teamId);
+            //延迟1秒 保证完全加载
+            session.Scene.TimerComponent.Net.OnceTimer(1000, () =>
+            {
+                var enterDungeonCompleteMessage = new StartDungeonBattleMessage();
+                enterDungeonCompleteMessage.battlePlayers = new List<BattlePlayerData>();
+                
+                var teamLobbyPlayers = lobbyPlayerComponent
+                    .GetLobbyPlayersByIds(lobbyPlayerComponent.GetTeamMemberIds(message.teamId));
+                
+                //给消息添加战斗玩家数据
+                teamLobbyPlayers.ForEach(x =>
+                {
+                    enterDungeonCompleteMessage.battlePlayers.Add(new BattlePlayerData()
+                    {
+                        playerId = x.AccountId,
+                        playerName = x.role.accountName,
+                    }); 
+                });
+                
+                //发送给队伍中的所有玩家
+                teamLobbyPlayers.Select(x => x.Session)
+                    .ToList().ForEach(x => x.Send(enterDungeonCompleteMessage));
             
-            
-            
-            
+                //移除加载进度缓存
+                lobbyPlayerComponent.ClearTeamLoadProgress(message.teamId);
+                
+                //通知开始战斗
+                battleComponent.StartBattle(teamLobbyPlayers);
+                
+            });
         }
 
 
