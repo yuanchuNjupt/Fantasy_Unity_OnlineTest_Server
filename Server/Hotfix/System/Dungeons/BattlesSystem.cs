@@ -5,8 +5,6 @@ using Hotfix.Helper;
 
 namespace Hotfix.System.Dungeons;
 
-
-
 public class BattleDestroySystem : DestroySystem<Dungeon>
 {
     protected override void Destroy(Dungeon self)
@@ -20,6 +18,7 @@ public class BattleDestroySystem : DestroySystem<Dungeon>
         {
             player.Value.Dispose();
         }
+
         self.BattlePlayers.Clear();
         self.TimerId = 0;
         self.LogicFrameId = 0;
@@ -27,46 +26,54 @@ public class BattleDestroySystem : DestroySystem<Dungeon>
     }
 }
 
-
 public static class BattlesSystem
 {
     public static void BattleStart(this Dungeon self)
     {
         self.BattleState = BattleStateEnum.Start;
-        
-        //逻辑帧更新
-        self.TimerId = self.Scene.TimerComponent.Net.RepeatedTimer(CommonConfig.LogicFrameIntervalMs, self.LogicFrameUpdate);
 
-        
-
+        // 逻辑帧更新
+        self.TimerId = self.Scene.TimerComponent.Net.RepeatedTimer(
+            CommonConfig.LogicFrameIntervalMs,
+            self.LogicFrameUpdate
+        );
     }
 
-    
     public static void LogicFrameUpdate(this Dungeon self)
     {
         try
         {
-            //逻辑帧自增
+            // 逻辑帧自增
             self.LogicFrameId++;
-            
-            //给战斗中的所有玩家 推送逻辑帧更新通知
-            var message = new FrameOperateEventMessage_G2C();
-            message.battleId = self.Id;
-            message.logicFrameId = self.LogicFrameId;
-            message.frameOperateDataList = new List<FrameOperationData>();
 
-            //收集所有客户端的当前帧操作推送给客户端
-            lock (self.FrameOperationDataList)
+            // 本次广播的采样帧：上一帧
+            var sampleFrameId = self.LogicFrameId - 1;
+            List<FrameOperationData> frameDataToSend;
+
+            lock (self.PlayerFrameOperationDataDic)
             {
-                foreach (var frameOperationData in self.FrameOperationDataList)
+                if (!self.PlayerFrameOperationDataDic.TryGetValue(sampleFrameId, out var lastFrameDataList))
                 {
-                    message.frameOperateDataList.Add(frameOperationData);
+                    lastFrameDataList = new List<FrameOperationData>();
                 }
-                //清理上一帧操作数据
-                self.FrameOperationDataList.Clear();
+
+                if (lastFrameDataList.Count < self.BattlePlayers.Count)
+                {
+                    Log.Warning(
+                        $"采样帧{sampleFrameId}未收齐，已收{lastFrameDataList.Count}/应收{self.BattlePlayers.Count}，继续广播。"
+                    );
+                }
+
+                // 复制发送，避免发送时并发修改
+                frameDataToSend = new List<FrameOperationData>(lastFrameDataList);
+
+                // 清理已发送帧，避免缓存累积
+                self.PlayerFrameOperationDataDic.Remove(sampleFrameId);
             }
-            
-            
+
+            Log.Info(
+                $"逻辑帧{self.LogicFrameId}，准备广播采样帧{sampleFrameId}的 {frameDataToSend.Count} 个操作数据"
+            );
 
             foreach (var player in self.BattlePlayers)
             {
@@ -75,30 +82,69 @@ public static class BattlesSystem
                     Log.Warning("玩家断线，无法推送逻辑帧 , ID : " + player.Value.PlayerId);
                     continue;
                 }
+
+                var message = new FrameOperateEventMessage_G2C
+                {
+                    battleId = self.Id,
+                    logicFrameId = self.LogicFrameId,
+                    frameOperateDataList = new List<FrameOperationData>(frameDataToSend)
+                };
+
                 player.Value.Session.Send(message);
             }
-            
-
         }
         catch (Exception e)
         {
-            Log.Error("逻辑帧更新异常 : " + e.Message);            
+            Log.Error("逻辑帧更新异常 : " + e.Message);
         }
     }
 
-    public static void SyncPlayerFrameData(this Dungeon self , long battleId , List<FrameOperationData> frameOperationDataList)
+    public static void SyncPlayerFrameData(this Dungeon self, long battleId, FrameOperationData frameOperationData)
     {
-        lock (self.FrameOperationDataList)
+        var sampleFrameId = frameOperationData.sampleFrameId;
+        var currentCollectFrame = self.LogicFrameId; // 当前逻辑帧期望收集的采样帧（按你现有流程）
+    
+        // 迟到帧：已经广播过（<= LogicFrameId - 1）的都丢弃，避免混入后续帧
+        if (sampleFrameId <= self.LogicFrameId - 1)
         {
-            frameOperationDataList.ForEach(x =>
+            Log.Warning(
+                $"丢弃迟到帧操作：battleId={battleId}, sampleFrameId={sampleFrameId}, currentLogicFrame={self.LogicFrameId}"
+            );
+            return;
+        }
+    
+        lock (self.PlayerFrameOperationDataDic)
+        {
+            if (!self.PlayerFrameOperationDataDic.TryGetValue(sampleFrameId, out var list))
             {
-                self.FrameOperationDataList.Add(x);
-            });
+                list = new List<FrameOperationData>();
+                self.PlayerFrameOperationDataDic[sampleFrameId] = list;
+            }
+    
+            // 同一玩家在同一采样帧只保留一条，避免重复上报导致单帧操作数膨胀
+            var duplicated = false;
+            foreach (var item in list)
+            {
+                if (item.playerId == frameOperationData.playerId)
+                {
+                    duplicated = true;
+                    break;
+                }
+            }
+    
+            if (duplicated)
+            {
+                Log.Warning(
+                    $"丢弃重复帧操作：battleId={battleId}, sampleFrameId={sampleFrameId}, playerId={frameOperationData.playerId}"
+                );
+                return;
+            }
+    
+            list.Add(frameOperationData);
+    
+            Log.Info(
+                $"战斗{battleId}接收帧操作：sampleFrameId={sampleFrameId}, 当前帧桶数量={list.Count}, 当前收集目标帧={currentCollectFrame}"
+            );
         }
     }
-    
-    
-    
-    
-    
 }

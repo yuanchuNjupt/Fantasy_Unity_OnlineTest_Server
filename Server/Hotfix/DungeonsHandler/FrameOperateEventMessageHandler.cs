@@ -16,7 +16,8 @@ public class FrameOperateEventMessageHandler : Message<FrameOperateEventMessage_
         var battleComponent = session.Scene.GetComponent<BattleManagerComponent>();
         
         battleComponent.OnPlayerOperateFrameInput(message.battleId , message.frameOperateDataList);
-        Log.Info("同步玩家帧操作数据：" + message.battleId);
+        
         await FTask.CompletedTask;
+        
     }
 }

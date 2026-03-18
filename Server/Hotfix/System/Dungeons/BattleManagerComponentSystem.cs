@@ -27,7 +27,7 @@ public static class BattleManagerComponentSystem
         dungeon.BattleStart();
     }
 
-    public static void OnPlayerOperateFrameInput(this BattleManagerComponent self, long battleId , List<FrameOperationData> frameDataList)
+    public static void OnPlayerOperateFrameInput(this BattleManagerComponent self, long battleId , FrameOperationData frameDataList)
     {
         //当前战斗是否存在
         self.AllBattles.TryGetValue(battleId, out var battle);

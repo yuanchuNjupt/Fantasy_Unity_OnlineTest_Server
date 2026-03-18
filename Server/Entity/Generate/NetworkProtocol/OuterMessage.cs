@@ -567,9 +567,8 @@ namespace Fantasy
 			operateType = default;
 			inputDir = default;
 			skillId = default;
-			skillType = default;
-			skillPos = default;
 			playerId = default;
+			sampleFrameId = default;
 #if FANTASY_NET || FANTASY_UNITY
 			GetScene().MessagePoolComponent.Return<FrameOperationData>(this);
 #endif
@@ -581,11 +580,9 @@ namespace Fantasy
 		[ProtoMember(3)]
 		public int skillId { get; set; }
 		[ProtoMember(4)]
-		public int skillType { get; set; }
-		[ProtoMember(5)]
-		public CSFixIntVector3 skillPos { get; set; }
-		[ProtoMember(6)]
 		public long playerId { get; set; }
+		[ProtoMember(5)]
+		public long sampleFrameId { get; set; }
 	}
 	[ProtoContract]
 	public partial class FrameOperateEventMessage_C2G : AMessage, IMessage
@@ -597,7 +594,7 @@ namespace Fantasy
 		public override void Dispose()
 		{
 			battleId = default;
-			frameOperateDataList.Clear();
+			frameOperateDataList = default;
 #if FANTASY_NET || FANTASY_UNITY
 			GetScene().MessagePoolComponent.Return<FrameOperateEventMessage_C2G>(this);
 #endif
@@ -606,7 +603,7 @@ namespace Fantasy
 		[ProtoMember(1)]
 		public long battleId { get; set; }
 		[ProtoMember(2)]
-		public List<FrameOperationData> frameOperateDataList = new List<FrameOperationData>();
+		public FrameOperationData frameOperateDataList { get; set; }
 	}
 	[ProtoContract]
 	public partial class FrameOperateEventMessage_G2C : AMessage, IMessage
@@ -649,11 +646,11 @@ namespace Fantasy
 #endif
 		}
 		[ProtoMember(1)]
-		public int x { get; set; }
+		public long x { get; set; }
 		[ProtoMember(2)]
-		public int y { get; set; }
+		public long y { get; set; }
 		[ProtoMember(3)]
-		public int z { get; set; }
+		public long z { get; set; }
 	}
 	[ProtoContract]
 	public partial class BattlePlayerData : AMessage

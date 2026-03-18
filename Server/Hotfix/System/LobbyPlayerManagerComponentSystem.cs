@@ -63,7 +63,7 @@ public static class LobbyPlayerManagerComponentSystem
         return self.LobbyPlayers.Values.Where(x => x.AccountId != filterId);  // 使用 AccountId 进行过滤
     }
 
-    public static List<LobbyPlayer>? GetLobbyPlayersByIds(this LobbyPlayerManagerComponent self, List<long> playerIds)
+    public static List<LobbyPlayer> GetLobbyPlayersByIds(this LobbyPlayerManagerComponent self, List<long> playerIds)
     {
         var list = self.LobbyPlayers.Values.Where(x => playerIds.Contains(x.AccountId)).ToList();
         if (list.Count != playerIds.Count)
@@ -127,15 +127,6 @@ public static class LobbyPlayerManagerComponentSystem
 
         if (syncData.playerState == 1)
         {
-            // //没输入
-            // if (player.PlayerState == 3)
-            // {
-            //     //上一次同步为冲刺，急停一段距离
-            //     player.Position.x += player.RenderDir.x * player.role.sprintEndDistance;
-            //     player.Position.y += player.RenderDir.y * player.role.sprintEndDistance;
-            //     player.Position.z += player.RenderDir.z * player.role.sprintEndDistance;
-            //     
-            // }
             player.PlayerState = 1;
         }
         else if (syncData.playerState == 2)
