@@ -67,8 +67,7 @@ public static class BattlesSystem
                 // 复制发送，避免发送时并发修改
                 frameDataToSend = new List<FrameOperationData>(lastFrameDataList);
 
-                // 清理已发送帧，避免缓存累积
-                self.PlayerFrameOperationDataDic.Remove(sampleFrameId);
+                // 这里不清理过期帧数据了，等BattleEnd时统一清理，避免误删还未广播的帧数据
             }
 
             Log.Info(
@@ -102,7 +101,7 @@ public static class BattlesSystem
     public static void SyncPlayerFrameData(this Dungeon self, long battleId, FrameOperationData frameOperationData)
     {
         var sampleFrameId = frameOperationData.sampleFrameId;
-        var currentCollectFrame = self.LogicFrameId; // 当前逻辑帧期望收集的采样帧（按你现有流程）
+        var currentCollectFrame = self.LogicFrameId; // 当前逻辑帧期望收集的采样帧
     
         // 迟到帧：已经广播过（<= LogicFrameId - 1）的都丢弃，避免混入后续帧
         if (sampleFrameId <= self.LogicFrameId - 1)
@@ -147,4 +146,21 @@ public static class BattlesSystem
             );
         }
     }
+    
+    public static void BattleEnd(this Dungeon self)
+    {
+        self.BattleState = BattleStateEnum.End;
+        
+        //这里的操作数据可以保存到数据库做战斗回放，但此项目暂不实现回放功能，所以直接清除
+        self.PlayerFrameOperationDataDic.Clear();
+        
+        if (self.TimerId != 0)
+        {
+            self.Scene.TimerComponent.Net.Remove(ref self.TimerId);
+            self.TimerId = 0;
+        }
+    }
+    
+    
+    
 }

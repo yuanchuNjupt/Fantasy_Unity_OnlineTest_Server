@@ -15,9 +15,7 @@ public class Dungeon : Entity
 
     public long TimerId;
     
-    // public List<FrameOperationData> FrameOperationDataList = new List<FrameOperationData>();
-    
-    public Dictionary<long , List<FrameOperationData>> PlayerFrameOperationDataDic = new Dictionary<long, List<FrameOperationData>>();
+    public readonly Dictionary<long , List<FrameOperationData>> PlayerFrameOperationDataDic = new Dictionary<long, List<FrameOperationData>>();
     
     
 }
