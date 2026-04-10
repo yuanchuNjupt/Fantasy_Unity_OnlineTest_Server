@@ -17,8 +17,7 @@ public class Dungeon : Entity
     
     public readonly Dictionary<long , List<FrameOperationData>> PlayerFrameOperationDataDic = new Dictionary<long, List<FrameOperationData>>();
     
-    //最大允许的预测帧数 
-    public long MaxPredictFrames = 5;
+    
     
     
     

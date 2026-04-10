@@ -495,6 +495,7 @@ namespace Fantasy
 		public override void Dispose()
 		{
 			battlePlayers.Clear();
+			frameRate = default;
 #if FANTASY_NET || FANTASY_UNITY
 			GetScene().MessagePoolComponent.Return<StartDungeonBattleMessage>(this);
 #endif
@@ -502,6 +503,8 @@ namespace Fantasy
 		public uint OpCode() { return OuterOpcode.StartDungeonBattleMessage; }
 		[ProtoMember(1)]
 		public List<BattlePlayerData> battlePlayers = new List<BattlePlayerData>();
+		[ProtoMember(2)]
+		public int frameRate { get; set; }
 	}
 	[ProtoContract]
 	public partial class StateSyncData : AMessage
@@ -582,6 +585,26 @@ namespace Fantasy
 		public long playerId { get; set; }
 	}
 	[ProtoContract]
+	public partial class OneFrameCommand : AMessage
+	{
+		public static OneFrameCommand Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<OneFrameCommand>();
+		}
+		public override void Dispose()
+		{
+			frameId = default;
+			frameOperateDataList.Clear();
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<OneFrameCommand>(this);
+#endif
+		}
+		[ProtoMember(1)]
+		public long frameId { get; set; }
+		[ProtoMember(2)]
+		public List<FrameOperationData> frameOperateDataList = new List<FrameOperationData>();
+	}
+	[ProtoContract]
 	public partial class FrameOperateEventMessage_C2G : AMessage, IMessage
 	{
 		public static FrameOperateEventMessage_C2G Create(Scene scene)
@@ -591,6 +614,7 @@ namespace Fantasy
 		public override void Dispose()
 		{
 			battleId = default;
+			lastLogicFrameId = default;
 			predictLogicFrameId = default;
 			frameOperateDataList.Clear();
 #if FANTASY_NET || FANTASY_UNITY
@@ -601,8 +625,10 @@ namespace Fantasy
 		[ProtoMember(1)]
 		public long battleId { get; set; }
 		[ProtoMember(2)]
-		public long predictLogicFrameId { get; set; }
+		public long lastLogicFrameId { get; set; }
 		[ProtoMember(3)]
+		public long predictLogicFrameId { get; set; }
+		[ProtoMember(4)]
 		public List<FrameOperationData> frameOperateDataList = new List<FrameOperationData>();
 	}
 	[ProtoContract]
@@ -615,8 +641,9 @@ namespace Fantasy
 		public override void Dispose()
 		{
 			battleId = default;
-			frameOperateDataList.Clear();
-			logicFrameId = default;
+			startLogicFrameId = default;
+			endLogicFrameId = default;
+			oneFrameCommandList.Clear();
 #if FANTASY_NET || FANTASY_UNITY
 			GetScene().MessagePoolComponent.Return<FrameOperateEventMessage_G2C>(this);
 #endif
@@ -625,9 +652,11 @@ namespace Fantasy
 		[ProtoMember(1)]
 		public long battleId { get; set; }
 		[ProtoMember(2)]
-		public List<FrameOperationData> frameOperateDataList = new List<FrameOperationData>();
+		public long startLogicFrameId { get; set; }
 		[ProtoMember(3)]
-		public long logicFrameId { get; set; }
+		public long endLogicFrameId { get; set; }
+		[ProtoMember(4)]
+		public List<OneFrameCommand> oneFrameCommandList = new List<OneFrameCommand>();
 	}
 	[ProtoContract]
 	public partial class CSFixIntVector3 : AMessage

@@ -152,6 +152,7 @@ message LoadDungeonProgressMessage // IMessage
 message StartDungeonBattleMessage // IMessage
 {
   repeated BattlePlayerData battlePlayers = 1;
+  int32 frameRate = 2; //每秒多少帧
 }
 
 // 同步玩家状态数据
@@ -184,18 +185,28 @@ message FrameOperationData
   int64 playerId = 4;
 }
 
+//一帧内所有的操作数据列表
+message OneFrameCommand
+{
+  int64 frameId = 1;
+  repeated FrameOperationData frameOperateDataList = 2;
+}
+
+
 message FrameOperateEventMessage_C2G // IMessage
 {
   int64 battleId = 1;
-  int64 predictLogicFrameId = 2; //预测的逻辑帧ID
-  repeated FrameOperationData frameOperateDataList = 3;
+  int64 lastLogicFrameId = 2; //上次操作数据对应的逻辑帧ID
+  int64 predictLogicFrameId = 3; //预测的逻辑帧ID
+  repeated FrameOperationData frameOperateDataList = 4;
 }
 
 message FrameOperateEventMessage_G2C // IMessage
 {
   int64 battleId = 1;
-  repeated FrameOperationData frameOperateDataList = 2;
-  int64 logicFrameId = 3; //当前逻辑帧ID
+  int64 startLogicFrameId = 2; //本次发送的第一条操作数据对应的逻辑帧ID
+  int64 endLogicFrameId = 3; //本次发送的最后一条操作数据对应的逻辑帧ID
+  repeated OneFrameCommand oneFrameCommandList = 4;
 }
 
 

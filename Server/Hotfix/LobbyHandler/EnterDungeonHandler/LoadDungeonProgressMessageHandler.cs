@@ -29,26 +29,8 @@ public class LoadDungeonProgressMessageHandler : Message<LoadDungeonProgressMess
             //延迟1秒 保证完全加载
             session.Scene.TimerComponent.Net.OnceTimer(1000, () =>
             {
-                var enterDungeonCompleteMessage = new StartDungeonBattleMessage();
-                enterDungeonCompleteMessage.battlePlayers = new List<BattlePlayerData>();
-                
                 var teamLobbyPlayers = lobbyPlayerComponent
                     .GetLobbyPlayersByIds(lobbyPlayerComponent.GetTeamMemberIds(message.teamId));
-                
-                //给消息添加战斗玩家数据
-                teamLobbyPlayers.ForEach(x =>
-                {
-                    enterDungeonCompleteMessage.battlePlayers.Add(new BattlePlayerData()
-                    {
-                        playerId = x.AccountId,
-                        playerName = x.role.accountName,
-                    }); 
-                });
-                
-                //发送给队伍中的所有玩家
-                teamLobbyPlayers.Select(x => x.Session)
-                    .ToList().ForEach(x => x.Send(enterDungeonCompleteMessage));
-            
                 //移除加载进度缓存
                 lobbyPlayerComponent.ClearTeamLoadProgress(message.teamId);
                 

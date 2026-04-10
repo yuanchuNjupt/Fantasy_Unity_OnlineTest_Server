@@ -2,6 +2,7 @@
 using Fantasy.Dungeons;
 using Fantasy.Entitas;
 using Fantasy.Lobby;
+using Hotfix.Helper;
 
 namespace Hotfix.System.Dungeons;
 
@@ -14,6 +15,21 @@ public static class BattleManagerComponentSystem
 
         dungeon.BattlePlayers = new Dictionary<long, BattlePlayer>();
         
+        var enterDungeonCompleteMessage = new StartDungeonBattleMessage();
+        enterDungeonCompleteMessage.battlePlayers = new List<BattlePlayerData>();
+        enterDungeonCompleteMessage.frameRate = CommonConfig.LogicFrameIntervalMs;
+        
+        //给消息添加战斗玩家数据
+        roleList.ForEach(x =>
+        {
+            enterDungeonCompleteMessage.battlePlayers.Add(new BattlePlayerData()
+            {
+                playerId = x.AccountId,
+                playerName = x.role.accountName,
+            }); 
+        });
+                
+        //发送给队伍中的所有玩家
         roleList.ForEach(role =>
         {
             BattlePlayer bp = Entity.Create<BattlePlayer>(self.Scene , true , true);
@@ -21,6 +37,7 @@ public static class BattleManagerComponentSystem
             bp.Session = role.Session;
             bp.BattleRole = role.role;
             dungeon.BattlePlayers.Add(bp.PlayerId, bp);
+            role.Session.Send(enterDungeonCompleteMessage);
         });
 
         //开始战斗，推送逻辑帧更新。

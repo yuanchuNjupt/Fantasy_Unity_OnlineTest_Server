@@ -14,6 +14,8 @@ public class BattlePlayer : Entity
 
     public bool IsBattleEnd = false;
 
+    public long CurrentFrameId = 0;
+
 
     public override void Dispose()
     {
