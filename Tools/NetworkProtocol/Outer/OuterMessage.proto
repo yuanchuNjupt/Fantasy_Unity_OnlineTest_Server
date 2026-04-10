@@ -182,13 +182,13 @@ message FrameOperationData
   CSFixIntVector3 inputDir = 2;
   int32 skillId = 3;
   int64 playerId = 4;
-  int64 sampleFrameId = 5; //采样帧ID
 }
 
 message FrameOperateEventMessage_C2G // IMessage
 {
   int64 battleId = 1;
-  FrameOperationData frameOperateDataList = 2;
+  int64 predictLogicFrameId = 2; //预测的逻辑帧ID
+  repeated FrameOperationData frameOperateDataList = 3;
 }
 
 message FrameOperateEventMessage_G2C // IMessage

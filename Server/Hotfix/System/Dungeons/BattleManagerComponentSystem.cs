@@ -27,7 +27,7 @@ public static class BattleManagerComponentSystem
         dungeon.BattleStart();
     }
 
-    public static void OnPlayerOperateFrameInput(this BattleManagerComponent self, long battleId , FrameOperationData frameDataList)
+    public static void OnPlayerOperateFrameInput(this BattleManagerComponent self, long battleId , FrameOperateEventMessage_C2G message)
     {
         //当前战斗是否存在
         self.AllBattles.TryGetValue(battleId, out var battle);
@@ -38,7 +38,7 @@ public static class BattleManagerComponentSystem
         }
             
         //缓存玩家操作
-        battle.SyncPlayerFrameData(battleId, frameDataList);
+        battle.SyncPlayerFrameData(battleId, message);
     }
 
 

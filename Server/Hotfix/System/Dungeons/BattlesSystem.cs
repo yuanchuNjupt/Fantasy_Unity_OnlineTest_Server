@@ -98,54 +98,58 @@ public static class BattlesSystem
         }
     }
 
-    public static void SyncPlayerFrameData(this Dungeon self, long battleId, FrameOperationData frameOperationData)
+    public static void SyncPlayerFrameData(this Dungeon self, long battleId, FrameOperateEventMessage_C2G message)
     {
-        var sampleFrameId = frameOperationData.sampleFrameId;
-        var currentCollectFrame = self.LogicFrameId; // 当前逻辑帧期望收集的采样帧
-    
-        // 迟到帧：已经广播过（<= LogicFrameId - 1）的都丢弃，避免混入后续帧
-        if (sampleFrameId <= self.LogicFrameId - 1)
+        
+        if(message.predictLogicFrameId < self.LogicFrameId)
         {
             Log.Warning(
-                $"丢弃迟到帧操作：battleId={battleId}, sampleFrameId={sampleFrameId}, currentLogicFrame={self.LogicFrameId}"
+                $"丢弃预测帧操作：battleId={battleId}, predictLogicFrameId={message.predictLogicFrameId}, currentLogicFrame={self.LogicFrameId}"
             );
             return;
         }
-    
+
+        if (message.predictLogicFrameId > self.LogicFrameId + self.MaxPredictFrames)
+        {
+            Log.Warning(
+                $"丢弃超前帧操作：battleId={battleId}, predictLogicFrameId={message.predictLogicFrameId}, currentLogicFrame={self.LogicFrameId}"
+            );
+            return;
+        }
+        
+        Log.Info("接收玩家操作数据，battleId : " + battleId + "预测逻辑帧数 : " + message.predictLogicFrameId + " 操作数据数量 : " + message.frameOperateDataList.Count);
+        
+        AddPlayerFrameOperationData(self, message.predictLogicFrameId, message.frameOperateDataList);
+    }
+
+
+    public static List<FrameOperationData> GetOneFrameOperationData(this Dungeon self , long frameId)
+    {
         lock (self.PlayerFrameOperationDataDic)
         {
-            if (!self.PlayerFrameOperationDataDic.TryGetValue(sampleFrameId, out var list))
+            if (!self.PlayerFrameOperationDataDic.TryGetValue(frameId, out var list))
             {
                 list = new List<FrameOperationData>();
-                self.PlayerFrameOperationDataDic[sampleFrameId] = list;
+                self.PlayerFrameOperationDataDic[frameId] = list;
             }
+        }
+        return self.PlayerFrameOperationDataDic[frameId];
+    }
     
-            // 同一玩家在同一采样帧只保留一条，避免重复上报导致单帧操作数膨胀
-            var duplicated = false;
-            foreach (var item in list)
+    public static void AddPlayerFrameOperationData(this Dungeon self , long frameId, List<FrameOperationData> frameOperationData)
+    {
+        lock (self.PlayerFrameOperationDataDic)
+        {
+            if (!self.PlayerFrameOperationDataDic.TryGetValue(frameId, out var list))
             {
-                if (item.playerId == frameOperationData.playerId)
-                {
-                    duplicated = true;
-                    break;
-                }
+                list = new List<FrameOperationData>();
+                self.PlayerFrameOperationDataDic[frameId] = list;
             }
-    
-            if (duplicated)
-            {
-                Log.Warning(
-                    $"丢弃重复帧操作：battleId={battleId}, sampleFrameId={sampleFrameId}, playerId={frameOperationData.playerId}"
-                );
-                return;
-            }
-    
-            list.Add(frameOperationData);
-    
-            Log.Info(
-                $"战斗{battleId}接收帧操作：sampleFrameId={sampleFrameId}, 当前帧桶数量={list.Count}, 当前收集目标帧={currentCollectFrame}"
-            );
+            self.PlayerFrameOperationDataDic[frameId].AddRange(frameOperationData);
         }
     }
+    
+    
     
     public static void BattleEnd(this Dungeon self)
     {

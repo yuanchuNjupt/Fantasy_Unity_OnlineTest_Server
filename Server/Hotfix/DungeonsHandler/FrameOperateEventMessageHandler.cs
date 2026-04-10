@@ -15,7 +15,7 @@ public class FrameOperateEventMessageHandler : Message<FrameOperateEventMessage_
         //即相同的时机 + 相同的操作 = 相同的结果
         var battleComponent = session.Scene.GetComponent<BattleManagerComponent>();
         
-        battleComponent.OnPlayerOperateFrameInput(message.battleId , message.frameOperateDataList);
+        battleComponent.OnPlayerOperateFrameInput(message.battleId , message);
         
         await FTask.CompletedTask;
         
