@@ -1,6 +1,7 @@
 ﻿using Fantasy;
 using Fantasy.Dungeons;
 using Fantasy.Entitas.Interface;
+using Fantasy.Helper;
 using Hotfix.Helper;
 
 namespace Hotfix.System.Dungeons;
@@ -144,6 +145,7 @@ public static class BattlesSystem
             battleId = self.Id,
             startLogicFrameId = startFrameId,
             endLogicFrameId =  endFrameId,
+            serverTick = TimeHelper.Now,
         };
         message.oneFrameCommandList = new List<OneFrameCommand>();
         
@@ -233,7 +235,11 @@ public static class BattlesSystem
         
         //同步玩家当前执行到的逻辑帧
         var player = GetBattlePlayer(self, message.frameOperateDataList[0].playerId);
-        
+        if (player == null)
+        {
+            Log.Info("未找到玩家，无法同步操作数据，battleId : " + battleId + " playerId : " + message.frameOperateDataList[0].playerId);
+            return;
+        }
         player.CurrentFrameId = Math.Max(player.CurrentFrameId, message.lastLogicFrameId);
         
         Log.Info("接收玩家操作数据，battleId : " + battleId + "预测逻辑帧数 : " + message.predictLogicFrameId + " 操作数据数量 : " + message.frameOperateDataList.Count);
@@ -245,7 +251,7 @@ public static class BattlesSystem
 
     #region 辅助方法
 
-    public static BattlePlayer GetBattlePlayer(this Dungeon self , long playerId)
+    public static BattlePlayer? GetBattlePlayer(this Dungeon self , long playerId)
     {
         if (self.BattlePlayers.TryGetValue(playerId, out var bp))
         {

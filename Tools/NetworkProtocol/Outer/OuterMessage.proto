@@ -206,7 +206,8 @@ message FrameOperateEventMessage_G2C // IMessage
   int64 battleId = 1;
   int64 startLogicFrameId = 2; //本次发送的第一条操作数据对应的逻辑帧ID
   int64 endLogicFrameId = 3; //本次发送的最后一条操作数据对应的逻辑帧ID
-  repeated OneFrameCommand oneFrameCommandList = 4;
+  int64 serverTick = 4; //服务器发送本消息的时间戳
+  repeated OneFrameCommand oneFrameCommandList = 5;
 }
 
 
