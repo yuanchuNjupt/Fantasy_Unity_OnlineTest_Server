@@ -115,7 +115,7 @@ public static class BattlesSystem
         
         if(startFrameId < availableFrameId)
         {
-            Log.Warning($"[补帧失败] 请求的起始帧ID {startFrameId} 已经过期，当前可用的最早帧ID是 {availableFrameId}");
+            Log.Warning($"[补帧失败] 请求的起始帧ID {startFrameId} 已经过期，当前可用的最早帧ID是 {availableFrameId} 应该进入断线重连流程了，battleId : {self.Id} playerId : {bp.PlayerId}");
             return;
         }
         
@@ -161,6 +161,8 @@ public static class BattlesSystem
             message.oneFrameCommandList.Add(oneFrameCommand);
         }
         
+        
+        Log.Info("发送追帧数据，battleId : " + self.Id + " playerId : " + bp.PlayerId + " 帧范围 : " + startFrameId + " - " + endFrameId);
         bp.Session.Send(message);
         
     }
@@ -216,7 +218,20 @@ public static class BattlesSystem
     
     public static void SyncPlayerFrameData(this Dungeon self, long battleId, FrameOperateEventMessage_C2G message)
     {
-        
+        // Guard invalid payloads first; background clients may send empty frame lists.
+        if (message == null)
+        {
+            Log.Warning($"玩家操作消息为空，battleId : {battleId}");
+            return;
+        }
+
+        if (message.frameOperateDataList == null || message.frameOperateDataList.Count == 0)
+        {
+            Log.Warning(
+                $"玩家操作数据为空，battleId : {battleId} predictLogicFrameId : {message.predictLogicFrameId} lastLogicFrameId : {message.lastLogicFrameId}");
+            return;
+        }
+
         if(message.predictLogicFrameId < self.LogicFrameId)
         {
             Log.Warning(
@@ -232,18 +247,20 @@ public static class BattlesSystem
             );
             return;
         }
-        
+
+        var firstOp = message.frameOperateDataList[0];
+
         //同步玩家当前执行到的逻辑帧
-        var player = GetBattlePlayer(self, message.frameOperateDataList[0].playerId);
+        var player = GetBattlePlayer(self, firstOp.playerId);
         if (player == null)
         {
-            Log.Info("未找到玩家，无法同步操作数据，battleId : " + battleId + " playerId : " + message.frameOperateDataList[0].playerId);
+            Log.Info("未找到玩家，无法同步操作数据，battleId : " + battleId + " playerId : " + firstOp.playerId);
             return;
         }
         player.CurrentFrameId = Math.Max(player.CurrentFrameId, message.lastLogicFrameId);
-        
+
         Log.Info("接收玩家操作数据，battleId : " + battleId + "预测逻辑帧数 : " + message.predictLogicFrameId + " 操作数据数量 : " + message.frameOperateDataList.Count);
-        
+
         AddPlayerFrameOperationData(self, message.predictLogicFrameId, message.frameOperateDataList);
     }
 
